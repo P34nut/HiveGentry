@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,8 +11,10 @@ public class GameManager : MonoBehaviour
     public float TaskCheckTime;
     public List<Room> Rooms;
     public List<Task> Tasks;
+    public TMP_Text SubtitleLabel;
 
     private float taskCheckTimer;
+    private Task currentTask;
 
     private void Awake()
     {
@@ -29,7 +32,7 @@ public class GameManager : MonoBehaviour
         if (taskCheckTimer >= TaskCheckTime)
         {
             taskCheckTimer = 0f;
-            CheckTask();
+            CheckNextTask();
         }
     } 
 
@@ -64,8 +67,16 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    public void CheckTask ()
+    public void CheckNextTask ()
     {
-        
+        foreach (var task in Tasks)
+        {
+            if (Random.Range(0f, 100f) > task.Chance) continue;
+
+            currentTask = task;
+            SubtitleLabel.text = currentTask.Subtitles;
+            Rooms[currentTask.RoomIndex].Refresh();
+            break;
+        }
     }
 }

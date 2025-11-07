@@ -8,7 +8,8 @@ public class Task : ScriptableObject
     [Range (0f, 100f)]
     public float Chance;
 
-    [Header ("Progress")]
+    [Header("Progress")]
+    public int RoomIndex;
     public float Duration = 30f;
     [TextArea]
     public string Subtitles;
