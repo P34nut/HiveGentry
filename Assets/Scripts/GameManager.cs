@@ -6,7 +6,11 @@ public class GameManager : MonoBehaviour
     static public GameManager Instance;
 
     public float EnergyTransferRate;
+    public float TaskCheckTime;
     public List<Room> Rooms;
+    public List<Task> Tasks;
+
+    private float taskCheckTimer;
 
     private void Awake()
     {
@@ -18,6 +22,16 @@ public class GameManager : MonoBehaviour
         Init();
     }
 
+    private void Update()
+    {
+        taskCheckTimer += Time.deltaTime;
+        if (taskCheckTimer >= TaskCheckTime)
+        {
+            taskCheckTimer = 0f;
+            CheckTask();
+        }
+    } 
+
     private void Init()
     {
         float energyPerRoom = 100f / Rooms.Count;
@@ -27,8 +41,8 @@ public class GameManager : MonoBehaviour
             room.Refresh();
         }
     }
-    
-    public void TransferEnergy (Room currentRoom)
+
+    public void TransferEnergy(Room currentRoom)
     {
         currentRoom.Energy += EnergyTransferRate * Time.deltaTime;
         currentRoom.Refresh();
@@ -38,5 +52,10 @@ public class GameManager : MonoBehaviour
             room.Energy -= EnergyTransferRate * Time.deltaTime / (Rooms.Count - 1);
             room.Refresh();
         }
+    }
+    
+    public void CheckTask ()
+    {
+        
     }
 }

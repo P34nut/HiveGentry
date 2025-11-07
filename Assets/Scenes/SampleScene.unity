@@ -641,11 +641,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnergyTransferRate: 5
+  TaskCheckTime: 10
   Rooms:
   - {fileID: 590164071}
   - {fileID: 100917941}
   - {fileID: 1931430501}
   - {fileID: 331351613}
+  Tasks:
+  - {fileID: 11400000, guid: 57119f601999cf34597519d0b62517d3, type: 2}
 --- !u!4 &554337178
 Transform:
   m_ObjectHideFlags: 0
