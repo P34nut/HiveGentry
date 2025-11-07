@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
         {
             if (room == currentRoom) continue;
             room.Energy -= EnergyTransferRate * Time.deltaTime / (Rooms.Count - 1);
+            room.Refresh();
         }
     }
 }

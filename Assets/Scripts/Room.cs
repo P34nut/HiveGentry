@@ -10,11 +10,12 @@ public class Room : MonoBehaviour
 
     public void Refresh ()
     {
-        Label.text = Name + ": " + Energy + "%";
+        Label.text = Name + ": " + Mathf.RoundToInt(Energy) + "%";
     }
 
     public void TransferEnergy()
     {
         GameManager.Instance.TransferEnergy(this);
+        Debug.Log("Transfer energy to " + Name);
     }
 }
