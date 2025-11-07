@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
-    static public GameManager Instance;
+    public static GameManager Instance;
 
     public float EnergyTransferRate;
     public List<Room> Rooms;
