@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
         foreach (Room room in Rooms)
         {
             room.Energy = energyPerRoom;
+            room.Refresh();
         }
     }
     
