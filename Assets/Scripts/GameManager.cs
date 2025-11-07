@@ -31,10 +31,12 @@ public class GameManager : MonoBehaviour
     public void TransferEnergy (Room currentRoom)
     {
         currentRoom.Energy += EnergyTransferRate * Time.deltaTime;
+        currentRoom.Refresh();
         foreach (Room room in Rooms)
         {
             if (room == currentRoom) continue;
             room.Energy -= EnergyTransferRate * Time.deltaTime / (Rooms.Count - 1);
+            room.Refresh();
         }
     }
 }
