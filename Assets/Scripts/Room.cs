@@ -8,9 +8,26 @@ public class Room : MonoBehaviour
     public float Energy;
     public TMP_Text Label;
 
-    public void Refresh ()
+    private bool pressed;
+
+    private void Update()
+    {
+        if (pressed) TransferEnergy();
+    } 
+
+    public void Refresh()
     {
         Label.text = Name + ": " + Mathf.RoundToInt(Energy) + "%";
+    }
+
+    public void OnPointerDown()
+    {
+        pressed = true;
+    }
+    
+    public void OnPointerUp ()
+    {
+        pressed = false;
     }
 
     public void TransferEnergy()
