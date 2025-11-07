@@ -1,8 +1,7 @@
 using UnityEngine;
 using System;
 
-[Serializable]
-public class Room
+public class Room : MonoBehaviour
 {
     public string Name;
     public float Energy;
