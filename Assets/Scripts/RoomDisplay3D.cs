@@ -4,11 +4,12 @@ using UnityEngine;
 public class RoomDisplay3D : RoomDisplay
 {
     [SerializeField] private MeshCollider _collider;
+    public MeshCollider _doorCollider;
     protected override void Refresh()
     {
         Label.text = Mathf.RoundToInt(Room.Energy) + "%";
         Task task = GameManager.Instance.CurrentTasks.Find(obj => obj.AffectedRoom == Room);
-
+        
         if (task != null)
         {
             Label.text = Mathf.RoundToInt(Room.Energy) + "/" + task.NecessaryMinEnergy + "%";
