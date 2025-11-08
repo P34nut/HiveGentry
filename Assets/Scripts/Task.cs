@@ -19,6 +19,9 @@ public class Task : ScriptableObject
     [TextArea]
     public string ReminderSubtitles;
     public AudioClip ReminderClip;
+    [TextArea]
+    public string LastReminderSubtitles;
+    public AudioClip LastReminderClip;
 
     [Header("Runtime")]
     public bool IsExecuted;
