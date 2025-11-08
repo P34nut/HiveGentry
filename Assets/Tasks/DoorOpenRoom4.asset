@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DoorOpenRoom4
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: a517cc4759e3aed48a33e17d98c264f4, type: 2}
-  MinGameTime: 2
+  MinGameTime: 1
   Chance: 25
   StartSubtitles: "Gentry. Mach die T\xFCr auf."
   StartClip: {fileID: 8300000, guid: 8f03cc6dc660cfb41a8256cd7a2a5caa, type: 3}
