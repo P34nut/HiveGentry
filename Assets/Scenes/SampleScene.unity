@@ -828,6 +828,8 @@ GameObject:
   - component: {fileID: 554337178}
   - component: {fileID: 554337177}
   - component: {fileID: 554337179}
+  - component: {fileID: 554337181}
+  - component: {fileID: 554337180}
   m_Layer: 0
   m_Name: Main
   m_TagString: Untagged
@@ -908,6 +910,153 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &554337180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554337176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08e5ce301c46aa74180e996f651fb27a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ambientSource: {fileID: 554337181}
+  _ambientClip: {fileID: 8300000, guid: 9fef14822db86d14cab8d3c65cc71979, type: 3}
+  roomStems:
+  - room: {fileID: 11400000, guid: 882af9c4837138a4488c44261e1d65cb, type: 2}
+    stemClip: {fileID: 8300000, guid: 4f1126daa9ea14e4abdce6c1bb048bc9, type: 3}
+    energyThreshold: 15
+    stemSource: {fileID: 0}
+    isPlaying: 0
+  - room: {fileID: 11400000, guid: 991e04d38531b1844918b33e39ffa05f, type: 2}
+    stemClip: {fileID: 8300000, guid: 4592c5feffaa8dd4a901ccc99765442b, type: 3}
+    energyThreshold: 25
+    stemSource: {fileID: 0}
+    isPlaying: 0
+  - room: {fileID: 11400000, guid: 112e38465e87d2a44b1a54199a7eaaad, type: 2}
+    stemClip: {fileID: 8300000, guid: 694a80aac4e7b9648bcea21dbbe7d16b, type: 3}
+    energyThreshold: 45
+    stemSource: {fileID: 0}
+    isPlaying: 0
+  - room: {fileID: 11400000, guid: a517cc4759e3aed48a33e17d98c264f4, type: 2}
+    stemClip: {fileID: 8300000, guid: a797c4ff7451ab44ba404b5cc39e1e3d, type: 3}
+    energyThreshold: 20
+    stemSource: {fileID: 0}
+    isPlaying: 0
+  - room: {fileID: 11400000, guid: 74ff56c96ce804143ab8dcfb7f912fa2, type: 2}
+    stemClip: {fileID: 8300000, guid: 36f32de3b8f57eb4e931acd937f34ab9, type: 3}
+    energyThreshold: 30
+    stemSource: {fileID: 0}
+    isPlaying: 0
+  - room: {fileID: 11400000, guid: b889004c69138694b96a70d3954d7dbe, type: 2}
+    stemClip: {fileID: 8300000, guid: 36f32de3b8f57eb4e931acd937f34ab9, type: 3}
+    energyThreshold: 10
+    stemSource: {fileID: 0}
+    isPlaying: 0
+  - room: {fileID: 11400000, guid: 74ff56c96ce804143ab8dcfb7f912fa2, type: 2}
+    stemClip: {fileID: 8300000, guid: 1699640126006724b9e4e706559d3e5c, type: 3}
+    energyThreshold: 40
+    stemSource: {fileID: 0}
+    isPlaying: 0
+--- !u!82 &554337181
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554337176}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
