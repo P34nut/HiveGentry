@@ -4,6 +4,9 @@ using System.Linq;
 using TMPro;
 using UnityEngine.Events;
 using System.Collections;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class GameManager : MonoBehaviour
 {
@@ -12,9 +15,13 @@ public class GameManager : MonoBehaviour
     public float EnergyTransferRate;
     public float TaskCheckTime;
     public float TaskReminderTime;
+    public int MaxTaskFails = 3;
     public List<Room> Rooms;
     public List<Task> Tasks;
     public TMP_Text SubtitleLabel;
+    [TextArea]
+    public string GameOverSubtitles;
+    public AudioClip GameOverClip;
     public AudioSource VoiceSource;
 
     [Header ("Runtime")]
@@ -157,6 +164,9 @@ public class GameManager : MonoBehaviour
     {
         yield return null;
 
+        int maxTasks = Mathf.Clamp(Mathf.CeilToInt(GameTimer * 0.05f), 1, 4);
+        if (CurrentTasks.Count >= maxTasks) yield break;
+
         float requiredOverallEnergy = 0f;
         foreach (Task currentTask in CurrentTasks)
         {
@@ -185,8 +195,22 @@ public class GameManager : MonoBehaviour
     private IEnumerator RemindTaskEnumerator (Task task)
     {
         yield return null;
-        SubtitleLabel.text = task.ReminderSubtitles;
-        if (task.ReminderClip != null) VoiceSource.PlayOneShot(task.ReminderClip);
+        task.FailStrikes++;
+        if (task.FailStrikes >= MaxTaskFails)
+        {
+            SubtitleLabel.text = GameOverSubtitles;
+            VoiceSource.PlayOneShot(GameOverClip);
+        }
+        else if (task.FailStrikes == MaxTaskFails - 1)
+        {
+            SubtitleLabel.text = task.ReminderSubtitles;
+            if (task.ReminderClip != null) VoiceSource.PlayOneShot(task.ReminderClip);
+        }
+        else
+        {
+            SubtitleLabel.text = task.ReminderSubtitles;
+            if (task.ReminderClip != null) VoiceSource.PlayOneShot(task.ReminderClip);
+        }
         
         float waitTimer = 0f;
         while (waitTimer <= 3f)
@@ -196,5 +220,14 @@ public class GameManager : MonoBehaviour
         }
 
         SubtitleLabel.text = string.Empty;
+        
+        if (task.FailStrikes >= MaxTaskFails)
+        {
+            #if UNITY_EDITOR
+            EditorApplication.isPlaying = false;
+            # else
+            Application.Quit ();
+            #endif
+        }
     }
 }

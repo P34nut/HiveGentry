@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LightsOnRoom2
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 991e04d38531b1844918b33e39ffa05f, type: 2}
-  MinGameTime: 2
+  MinGameTime: 1
   Chance: 20
   StartSubtitles: Hey Gentry, can you turn on the light for me, please?
   StartClip: {fileID: 8300000, guid: 8f03cc6dc660cfb41a8256cd7a2a5caa, type: 3}

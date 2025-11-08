@@ -23,12 +23,14 @@ public class Task : ScriptableObject
     [Header("Runtime")]
     public bool IsExecuted;
     public float FailTimer;
+    public int FailStrikes;
     public float SuccessTimer;
 
     public void Init ()
     {
         IsExecuted = false;
         FailTimer = 0f;
+        FailStrikes = 0;
         SuccessTimer = 0f;
     }
 
