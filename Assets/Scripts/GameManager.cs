@@ -56,8 +56,9 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        foreach (var task in CurrentTasks)
+        for (int i = CurrentTasks.Count - 1; i >= 0; i--)
         {
+            Task task = CurrentTasks[i];
             CheckTaskConditions(task);
         }
     } 
@@ -103,7 +104,6 @@ public class GameManager : MonoBehaviour
         foreach (var task in Tasks)
         {
             if (CurrentTasks.Contains(task)) continue;
-            if (CurrentTasks.Exists(obj => obj.AffectedRoom == task.AffectedRoom)) continue;
             if (task.MinGameTime > GameTimer) continue;
             if (Random.Range(0f, 100f) > task.Chance) continue;
             IEnumerator enumerator = NewTaskEnumerator(task);
@@ -120,6 +120,7 @@ public class GameManager : MonoBehaviour
             if (task.SuccessTimer > task.Duration)
             {
                 CurrentTasks.Remove(task);
+                OnTaskChanged?.Invoke();
             }
 
             if (!task.AreConditionsMet())
@@ -154,6 +155,15 @@ public class GameManager : MonoBehaviour
     private IEnumerator NewTaskEnumerator(Task task)
     {
         yield return null;
+
+        float requiredOverallEnergy = 0f;
+        foreach (Task currentTask in CurrentTasks)
+        {
+            requiredOverallEnergy += currentTask.NecessaryMinEnergy;
+        }
+        if (requiredOverallEnergy + task.NecessaryMinEnergy > 90) yield break;
+        if (CurrentTasks.Exists(obj => obj.AffectedRoom == task.AffectedRoom)) yield break;
+
         task.Init();
         CurrentTasks.Add(task);
         SubtitleLabel.text = task.StartSubtitles;

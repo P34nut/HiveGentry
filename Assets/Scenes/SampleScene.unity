@@ -626,8 +626,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99120d559cb08824b9faef5441594efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnergyTransferRate: 5
-  TaskCheckTime: 6
+  EnergyTransferRate: 6
+  TaskCheckTime: 1
   TaskReminderTime: 12
   Rooms:
   - {fileID: 11400000, guid: 882af9c4837138a4488c44261e1d65cb, type: 2}
