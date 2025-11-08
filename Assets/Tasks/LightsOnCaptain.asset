@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a17b394eec47aa24cb9ccfd47ad24b28, type: 3}
-  m_Name: LightsOnRoom6
+  m_Name: LightsOnCaptain
   m_EditorClassIdentifier: 
-  AffectedRoom: {fileID: 11400000, guid: b889004c69138694b96a70d3954d7dbe, type: 2}
+  AffectedRoom: {fileID: 11400000, guid: 87da5891bde13174ea88b4e7563b5d31, type: 2}
   AffectedCharacter: {fileID: 0}
   MinGameTime: 1
   Chance: 20
@@ -25,7 +25,7 @@ MonoBehaviour:
   ReminderClip: {fileID: 8300000, guid: 65c7085bf435edc4a91c79f22ee50ada, type: 3}
   LastReminderSubtitles: Es ist hier immernoch dunkel. Wo ist das Licht?
   LastReminderClip: {fileID: 8300000, guid: 9e7d46c286cd237428e27355eaa990c0, type: 3}
-  IsExecuted: 1
-  FailTimer: 7.3024898
+  IsExecuted: 0
+  FailTimer: 0
   FailStrikes: 0
-  SuccessTimer: 4.5178165
+  SuccessTimer: 0

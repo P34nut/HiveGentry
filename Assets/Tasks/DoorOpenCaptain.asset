@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a17b394eec47aa24cb9ccfd47ad24b28, type: 3}
-  m_Name: DoorOpenRoom6
+  m_Name: DoorOpenCaptain
   m_EditorClassIdentifier: 
-  AffectedRoom: {fileID: 11400000, guid: b889004c69138694b96a70d3954d7dbe, type: 2}
+  AffectedRoom: {fileID: 11400000, guid: 87da5891bde13174ea88b4e7563b5d31, type: 2}
   AffectedCharacter: {fileID: 0}
   MinGameTime: 1
   Chance: 20
