@@ -10,7 +10,7 @@ public class RoomDisplay : MonoBehaviour
     public TMP_Text TimerLabel;
     public Button ExecuteButton;
 
-    private bool pressed;
+    protected bool pressed;
 
     void OnEnable()
     {
@@ -28,7 +28,8 @@ public class RoomDisplay : MonoBehaviour
 
     private void Update()
     {
-        if (pressed) Room.TransferEnergy();
+        if (pressed) 
+            Room.TransferEnergy();
 
         Task task = GameManager.Instance.CurrentTasks.Find(obj => obj.AffectedRoom == Room);
         if (task != null && task.IsExecuted)
@@ -40,7 +41,7 @@ public class RoomDisplay : MonoBehaviour
         }
     }
 
-    public void Refresh()
+    public virtual void Refresh()
     {
         Label.text = Room.name + ": " + Mathf.RoundToInt(Room.Energy) + "%";
 
@@ -49,7 +50,7 @@ public class RoomDisplay : MonoBehaviour
         ExecuteButton.gameObject.SetActive(false);
         if (task != null)
         {
-            TaskLabel.text = ">" + task.NecessaryMinEnergy.ToString();
+            TaskLabel.text = ">" + task.NecessaryMinEnergy;
             ExecuteButton.gameObject.SetActive(!task.IsExecuted && task.AreConditionsMet());
         }
     }
