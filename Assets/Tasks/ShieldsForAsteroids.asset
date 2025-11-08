@@ -16,10 +16,12 @@ MonoBehaviour:
   MinGameTime: 0
   Chance: 100
   StartSubtitles: Gentry! An asteroid storm. We need power to the shields.
+  StartClip: {fileID: 8300000, guid: 8f03cc6dc660cfb41a8256cd7a2a5caa, type: 3}
   Duration: 90
   NecessaryMinEnergy: 50
   ReminderSubtitles: Hey, Gentry. The shields! Raise the shields, or an asteroid
     will hit us!
+  ReminderClip: {fileID: 8300000, guid: 99bb9d9d1ee3d9a469a76e4c427267ae, type: 3}
   IsExecuted: 1
   FailTimer: 7.3461494
   SuccessTimer: 19.569086

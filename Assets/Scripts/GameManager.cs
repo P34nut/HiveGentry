@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public List<Room> Rooms;
     public List<Task> Tasks;
     public TMP_Text SubtitleLabel;
+    public AudioSource VoiceSource;
 
     [Header ("Runtime")]
     public List<Task> CurrentTasks;
@@ -167,6 +168,8 @@ public class GameManager : MonoBehaviour
         task.Init();
         CurrentTasks.Add(task);
         SubtitleLabel.text = task.StartSubtitles;
+        if (task.StartClip != null) VoiceSource.PlayOneShot(task.StartClip);
+
         OnTaskAdded?.Invoke();
 
         float waitTimer = 0f;
@@ -183,6 +186,7 @@ public class GameManager : MonoBehaviour
     {
         yield return null;
         SubtitleLabel.text = task.ReminderSubtitles;
+        if (task.ReminderClip != null) VoiceSource.PlayOneShot(task.ReminderClip);
         
         float waitTimer = 0f;
         while (waitTimer <= 3f)
