@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Weapons
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 991e04d38531b1844918b33e39ffa05f, type: 2}
+  AffectedCharacter: {fileID: 0}
   MinGameTime: 25
   Chance: 100
   StartSubtitles: Wir werden angegriffen. Gentry, wir brauchen Energie in den Waffensystemen!

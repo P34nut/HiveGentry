@@ -164,7 +164,7 @@ public class GameManager : MonoBehaviour
     {
         yield return null;
 
-        int maxTasks = Mathf.Clamp(Mathf.CeilToInt(GameTimer * 0.025f), 1, 4);
+        int maxTasks = Mathf.Clamp(Mathf.CeilToInt(GameTimer * 0.025f), 2, 4);
         if (CurrentTasks.Count >= maxTasks) yield break;
 
         float requiredOverallEnergy = 0f;
@@ -195,6 +195,8 @@ public class GameManager : MonoBehaviour
     private IEnumerator RemindTaskEnumerator (Task task)
     {
         yield return null;
+        if (task.IsExecuted || !CurrentTasks.Contains(task)) yield break;
+
         task.FailStrikes++;
         if (task.FailStrikes >= MaxTaskFails)
         {

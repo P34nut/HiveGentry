@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: HyperspaceJump
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 112e38465e87d2a44b1a54199a7eaaad, type: 2}
+  AffectedCharacter: {fileID: 0}
   MinGameTime: 1
   Chance: 30
   StartSubtitles: Gentry. Initiiere Hyperraum-Sprung!

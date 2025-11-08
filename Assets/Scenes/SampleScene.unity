@@ -850,8 +850,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnergyTransferRate: 6
-  TaskCheckTime: 3
-  TaskReminderTime: 12
+  TaskCheckTime: 2.5
+  TaskReminderTime: 7.5
   MaxTaskFails: 3
   Rooms:
   - {fileID: 11400000, guid: 882af9c4837138a4488c44261e1d65cb, type: 2}
@@ -877,6 +877,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2f75051864f372045989d7cecd14848d, type: 2}
   - {fileID: 11400000, guid: 84952866df661db4aa6bc8837af42866, type: 2}
   - {fileID: 11400000, guid: fd9636b5341cc4141a8013b0106c6d68, type: 2}
+  - {fileID: 11400000, guid: 73ed64ce985e4d04685f14f0607abf90, type: 2}
   - {fileID: 11400000, guid: 57119f601999cf34597519d0b62517d3, type: 2}
   - {fileID: 11400000, guid: a3da5c6719b60fc498f5d6e4ec11bf18, type: 2}
   - {fileID: 11400000, guid: 6d965282efd0fc5448f3c5ef9209600f, type: 2}

@@ -5,6 +5,7 @@ public class Task : ScriptableObject
 {
     [Header("Conditions")]
     public Room AffectedRoom;
+    public Character AffectedCharacter;
     public float MinGameTime;
     [Range(0f, 100f)]
     public float Chance;
@@ -39,6 +40,7 @@ public class Task : ScriptableObject
 
     public bool AreConditionsMet ()
     {
+        if (!GameManager.Instance.CurrentTasks.Contains(this)) return false;
         return AffectedRoom.Energy >= NecessaryMinEnergy;
     }
 }
