@@ -16,4 +16,5 @@ MonoBehaviour:
   Chance: 100
   Duration: 300
   Subtitles: Gentry! Ein Asteroidensturm. Wir brauchen Energie auf den Schilden.
+  AffectedRoom: {fileID: 11400000, guid: 882af9c4837138a4488c44261e1d65cb, type: 2}
   NecessaryMinEnergy: 40

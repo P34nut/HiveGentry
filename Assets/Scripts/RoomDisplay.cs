@@ -1,0 +1,65 @@
+using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+
+public class RoomDisplay : MonoBehaviour
+{
+    public Room Room;
+    public TMP_Text Label;
+    public TMP_Text TaskLabel;
+    public Button ExecuteButton;
+
+    private bool pressed;
+
+    void OnEnable()
+    {
+        GameManager.Instance.OnEnergyChanged += Refresh;
+        GameManager.Instance.OnTaskAdded += Refresh;
+        GameManager.Instance.OnTaskChanged += Refresh;
+    }
+
+    void OnDisable()
+    {
+        GameManager.Instance.OnEnergyChanged -= Refresh;
+        GameManager.Instance.OnTaskAdded -= Refresh;
+        GameManager.Instance.OnTaskChanged -= Refresh;
+    }
+
+    private void Update()
+    {
+        if (pressed) Room.TransferEnergy();
+    }
+
+    public void Refresh()
+    {
+        Label.text = Room.name + ": " + Mathf.RoundToInt(Room.Energy) + "%";
+
+        Task task = GameManager.Instance.CurrentTasks.Find(obj => obj.AffectedRoom == Room);
+        TaskLabel.text = string.Empty;
+        ExecuteButton.gameObject.SetActive(false);
+        if (task != null)
+        {
+            TaskLabel.text = ">" + task.NecessaryMinEnergy.ToString();
+            ExecuteButton.gameObject.SetActive(!task.IsExecuted && task.AreConditionsMet ());
+        }
+    }
+
+    public void OnPointerDown()
+    {
+        pressed = true;
+    }
+
+    public void OnPointerUp()
+    {
+        pressed = false;
+    }
+
+    public void OnClickExecute ()
+    {
+        Task task = GameManager.Instance.CurrentTasks.Find(obj => obj.AffectedRoom == Room);
+        if (task != null)
+        {
+            GameManager.Instance.ExecuteTask(task);
+        }
+    }
+}

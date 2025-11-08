@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,8 +14,12 @@ public class GameManager : MonoBehaviour
     public List<Task> Tasks;
     public TMP_Text SubtitleLabel;
 
+    public UnityAction OnEnergyChanged;
+    public UnityAction OnTaskAdded;
+    public UnityAction OnTaskChanged;
+
     private float taskCheckTimer;
-    private Task currentTask;
+    public List<Task> CurrentTasks;
 
     private void Awake()
     {
@@ -24,6 +29,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Init();
+        taskCheckTimer = 9f;
     }
 
     private void Update()
@@ -34,6 +40,11 @@ public class GameManager : MonoBehaviour
             taskCheckTimer = 0f;
             CheckNextTask();
         }
+
+        foreach (var task in CurrentTasks)
+        {
+            CheckTaskConditions(task);
+        }
     } 
 
     private void Init()
@@ -42,8 +53,8 @@ public class GameManager : MonoBehaviour
         foreach (Room room in Rooms)
         {
             room.Energy = energyPerRoom;
-            room.Refresh();
         }
+        OnEnergyChanged?.Invoke();
     }
 
     public void TransferEnergy(Room currentRoom)
@@ -52,31 +63,47 @@ public class GameManager : MonoBehaviour
             return;
         
         currentRoom.Energy += EnergyTransferRate * Time.deltaTime;
-        currentRoom.Refresh();
 
         var activeRoomCounter = Rooms.Count(r => r != currentRoom && r.Energy > 0);
-        
+
         foreach (Room room in Rooms)
         {
             if (room == currentRoom) continue;
             if (room.Energy <= 0) continue;
-            
+
             room.Energy -= EnergyTransferRate * Time.deltaTime / activeRoomCounter;
             room.Energy = Mathf.Clamp(room.Energy, 0, 100);
-            room.Refresh();
         }
+
+        OnEnergyChanged?.Invoke();
     }
-    
-    public void CheckNextTask ()
+
+    private void CheckNextTask()
     {
         foreach (var task in Tasks)
         {
             if (Random.Range(0f, 100f) > task.Chance) continue;
 
-            currentTask = task;
-            SubtitleLabel.text = currentTask.Subtitles;
-            Rooms[currentTask.RoomIndex].Refresh();
+            CurrentTasks.Add(task);
+            SubtitleLabel.text = task.Subtitles;
+
+            OnTaskAdded?.Invoke();
             break;
         }
+    }
+
+    private void CheckTaskConditions (Task task)
+    {
+        if (!task.AreConditionsMet ())
+        {
+            task.IsExecuted = false;
+            OnTaskChanged?.Invoke();
+        }
+    }
+    
+    public void ExecuteTask (Task task)
+    {
+        task.IsExecuted = true;
+        OnTaskChanged?.Invoke();
     }
 }
