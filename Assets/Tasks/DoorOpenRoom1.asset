@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a17b394eec47aa24cb9ccfd47ad24b28, type: 3}
-  m_Name: ShieldsForAsteroids
+  m_Name: DoorOpenRoom1
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 882af9c4837138a4488c44261e1d65cb, type: 2}
-  MinGameTime: 0
-  Chance: 100
-  StartSubtitles: Gentry! An asteroid storm. We need power to the shields.
-  Duration: 90
-  NecessaryMinEnergy: 50
-  ReminderSubtitles: Hey, Gentry. The shields! Raise the shields, or an asteroid
-    will hit us!
-  IsExecuted: 1
-  FailTimer: 7.3461494
-  SuccessTimer: 19.569086
+  MinGameTime: 2
+  Chance: 50
+  StartSubtitles: "Gentry. Mach die T\xFCr auf."
+  Duration: 3
+  NecessaryMinEnergy: 25
+  ReminderSubtitles: "Gentry. Ich muss da rein. Die T\xFCr. Auf."
+  IsExecuted: 0
+  FailTimer: 0
+  SuccessTimer: 0

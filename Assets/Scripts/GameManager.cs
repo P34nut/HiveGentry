@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine.Events;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,16 +11,21 @@ public class GameManager : MonoBehaviour
 
     public float EnergyTransferRate;
     public float TaskCheckTime;
+    public float TaskReminderTime;
     public List<Room> Rooms;
     public List<Task> Tasks;
     public TMP_Text SubtitleLabel;
+
+    [Header ("Runtime")]
+    public List<Task> CurrentTasks;
+    public float GameTimer;
 
     public UnityAction OnEnergyChanged;
     public UnityAction OnTaskAdded;
     public UnityAction OnTaskChanged;
 
     private float taskCheckTimer;
-    public List<Task> CurrentTasks;
+    private List<IEnumerator> progress = new();
 
     private void Awake()
     {
@@ -34,11 +40,20 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        GameTimer += Time.deltaTime;
         taskCheckTimer += Time.deltaTime;
         if (taskCheckTimer >= TaskCheckTime)
         {
             taskCheckTimer = 0f;
             CheckNextTask();
+        }
+
+        if (progress.Count > 0)
+        {
+            if (!progress[0].MoveNext())
+            {
+                progress.RemoveAt(0);
+            }
         }
 
         foreach (var task in CurrentTasks)
@@ -55,6 +70,11 @@ public class GameManager : MonoBehaviour
             room.Energy = energyPerRoom;
         }
         OnEnergyChanged?.Invoke();
+
+        foreach (Task task in Tasks)
+        {
+            task.Init();
+        }
     }
 
     public void TransferEnergy(Room currentRoom)
@@ -82,28 +102,85 @@ public class GameManager : MonoBehaviour
     {
         foreach (var task in Tasks)
         {
+            if (CurrentTasks.Contains(task)) continue;
+            if (CurrentTasks.Exists(obj => obj.AffectedRoom == task.AffectedRoom)) continue;
+            if (task.MinGameTime > GameTimer) continue;
             if (Random.Range(0f, 100f) > task.Chance) continue;
-
-            CurrentTasks.Add(task);
-            SubtitleLabel.text = task.Subtitles;
-
-            OnTaskAdded?.Invoke();
+            IEnumerator enumerator = NewTaskEnumerator(task);
+            progress.Add(enumerator);
             break;
         }
     }
 
     private void CheckTaskConditions (Task task)
     {
-        if (!task.AreConditionsMet ())
+        if (task.IsExecuted)
         {
-            task.IsExecuted = false;
-            OnTaskChanged?.Invoke();
+            task.SuccessTimer += Time.deltaTime;
+            if (task.SuccessTimer > task.Duration)
+            {
+                CurrentTasks.Remove(task);
+            }
+
+            if (!task.AreConditionsMet())
+            {
+                task.IsExecuted = false;
+
+                IEnumerator enumerator = RemindTaskEnumerator(task);
+                progress.Add(enumerator);
+                task.FailTimer = 0f;
+
+                OnTaskChanged?.Invoke();
+            }
+        }
+        else
+        {
+            task.FailTimer += Time.deltaTime;
+            if (task.FailTimer > TaskReminderTime)
+            {
+                IEnumerator enumerator = RemindTaskEnumerator(task);
+                progress.Add(enumerator);
+                task.FailTimer = 0f;
+            }
         }
     }
-    
-    public void ExecuteTask (Task task)
+
+    public void ExecuteTask(Task task)
     {
         task.IsExecuted = true;
         OnTaskChanged?.Invoke();
+    }
+    
+    private IEnumerator NewTaskEnumerator(Task task)
+    {
+        yield return null;
+        task.Init();
+        CurrentTasks.Add(task);
+        SubtitleLabel.text = task.StartSubtitles;
+        OnTaskAdded?.Invoke();
+
+        float waitTimer = 0f;
+        while (waitTimer <= 3f)
+        {
+            waitTimer += Time.deltaTime;
+            yield return null;
+        }
+
+        SubtitleLabel.text = string.Empty;
+    }
+    
+    private IEnumerator RemindTaskEnumerator (Task task)
+    {
+        yield return null;
+        SubtitleLabel.text = task.ReminderSubtitles;
+        
+        float waitTimer = 0f;
+        while (waitTimer <= 3f)
+        {
+            waitTimer += Time.deltaTime;
+            yield return null;
+        }
+
+        SubtitleLabel.text = string.Empty;
     }
 }
