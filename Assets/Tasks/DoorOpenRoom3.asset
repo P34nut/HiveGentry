@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17b394eec47aa24cb9ccfd47ad24b28, type: 3}
+  m_Name: DoorOpenRoom3
+  m_EditorClassIdentifier: 
+  AffectedRoom: {fileID: 11400000, guid: 112e38465e87d2a44b1a54199a7eaaad, type: 2}
+  MinGameTime: 2
+  Chance: 50
+  StartSubtitles: "Gentry. Mach die T\xFCr auf."
+  Duration: 3
+  NecessaryMinEnergy: 25
+  ReminderSubtitles: "Gentry. Ich muss da rein. Die T\xFCr. Auf."
+  IsExecuted: 0
+  FailTimer: 0
+  SuccessTimer: 0

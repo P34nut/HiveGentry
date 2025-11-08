@@ -626,16 +626,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99120d559cb08824b9faef5441594efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnergyTransferRate: 5
-  TaskCheckTime: 10
+  EnergyTransferRate: 6
+  TaskCheckTime: 1
+  TaskReminderTime: 12
   Rooms:
   - {fileID: 11400000, guid: 882af9c4837138a4488c44261e1d65cb, type: 2}
   - {fileID: 11400000, guid: 991e04d38531b1844918b33e39ffa05f, type: 2}
   - {fileID: 11400000, guid: 112e38465e87d2a44b1a54199a7eaaad, type: 2}
   - {fileID: 11400000, guid: a517cc4759e3aed48a33e17d98c264f4, type: 2}
   Tasks:
+  - {fileID: 11400000, guid: 7ca75e9ecdae1754b8fc695c8a73c5df, type: 2}
+  - {fileID: 11400000, guid: c864df6710464614e9f3f222dec57861, type: 2}
+  - {fileID: 11400000, guid: 5365a29903ce95340ac0edc6a8da9dd9, type: 2}
+  - {fileID: 11400000, guid: d131273bd2edfd34986de8ecc12c3d79, type: 2}
+  - {fileID: 11400000, guid: 4351f74f9f99d5241af0cbffe68a8511, type: 2}
+  - {fileID: 11400000, guid: 5722e2480b6ff5a4ea5d3211c3075071, type: 2}
   - {fileID: 11400000, guid: 57119f601999cf34597519d0b62517d3, type: 2}
   SubtitleLabel: {fileID: 2034911390}
+  CurrentTasks: []
+  GameTimer: 0
 --- !u!4 &554337178
 Transform:
   m_ObjectHideFlags: 0
