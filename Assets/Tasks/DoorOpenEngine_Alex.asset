@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a17b394eec47aa24cb9ccfd47ad24b28, type: 3}
-  m_Name: DoorOpenEngine
+  m_Name: DoorOpenEngine_Alex
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 112e38465e87d2a44b1a54199a7eaaad, type: 2}
-  AffectedCharacter: {fileID: 0}
+  AffectedCharacter: {fileID: 11400000, guid: 435682dfeb6aaf043ae332a54d109936, type: 2}
   MinGameTime: 1
   Chance: 20
-  StartSubtitles: "Gentry. Mach die T\xFCr auf."
+  StartSubtitles: Gentry, open the door.
   StartClip: {fileID: 8300000, guid: d396bd73f82c65e43a485d8849224e9d, type: 3}
   Duration: 3
   NecessaryMinEnergy: 15
-  ReminderSubtitles: "Gentry. Ich muss da rein. Die T\xFCr. Auf."
+  ReminderSubtitles: I'm still standing here in front of the locked door, Gentry.
   ReminderClip: {fileID: 8300000, guid: d2abdd8c6dc905d4c974ac8e5d8adf9e, type: 3}
-  LastReminderSubtitles: "Oh mein Gott, Gentry. Mach! Jetzt! Die! T\xFCr! Auf!"
+  LastReminderSubtitles: I want to get in there now. Open the damn door!
   LastReminderClip: {fileID: 8300000, guid: f4f79b2a106e3cb479f4469fd20d83d7, type: 3}
-  IsExecuted: 1
-  FailTimer: 2.0249577
+  IsExecuted: 0
+  FailTimer: 0
   FailStrikes: 0
-  SuccessTimer: 3.0060563
+  SuccessTimer: 0

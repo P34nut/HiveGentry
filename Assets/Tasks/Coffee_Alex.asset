@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: Coffee_Alex
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 882af9c4837138a4488c44261e1d65cb, type: 2}
-  AffectedCharacter: {fileID: 0}
+  AffectedCharacter: {fileID: 11400000, guid: 435682dfeb6aaf043ae332a54d109936, type: 2}
   MinGameTime: 1
   Chance: 35
-  StartSubtitles: "So verdammt m\xFCde, Junge! Ich brauch unbedingt n Kaffee."
+  StartSubtitles: I'm so exhausted, Gentry. I really need a coffee.
   StartClip: {fileID: 8300000, guid: 9491bff2b0370574e9bba59cb8d1a648, type: 3}
   Duration: 15
   NecessaryMinEnergy: 40
-  ReminderSubtitles: Wo ist der Kaffee? Kaffee? Kaffee?
+  ReminderSubtitles: Gentry! Where's the coffee, dude?
   ReminderClip: {fileID: 8300000, guid: b163841028ad7bf40ae2609897420038, type: 3}
-  LastReminderSubtitles: Verdammt Gentry. GIB MIR KAFFEE!!!
+  LastReminderSubtitles: Gentry, give me the damn coffee now or I'll delete you!
   LastReminderClip: {fileID: 8300000, guid: 1a549b30fcfb76d4d84273c62289874d, type: 3}
   IsExecuted: 0
-  FailTimer: 2.8010657
+  FailTimer: 0
   FailStrikes: 0
   SuccessTimer: 0

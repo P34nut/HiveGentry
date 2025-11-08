@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0621f80b64d0527478b147591016f8fa, type: 3}
   m_Name: Alex
   m_EditorClassIdentifier: 
+  GameOverSubtitles: Okay, that's it. I should've turned you off a long while ago
+    and replace you with a new version.
+  GameOverClip: {fileID: 8300000, guid: 606439aca3eaef24da64cc38b7550a61, type: 3}

@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0621f80b64d0527478b147591016f8fa, type: 3}
   m_Name: Jenny
   m_EditorClassIdentifier: 
+  GameOverSubtitles: Gentry, I'm really sorry, I have no choice but to replace you
+    with a newer system.
+  GameOverClip: {fileID: 8300000, guid: 22100b8e0d4a14bb8aaa52d1a4f0d1f5, type: 3}

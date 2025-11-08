@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a17b394eec47aa24cb9ccfd47ad24b28, type: 3}
-  m_Name: LightsOnBath
+  m_Name: LightsOnMess_Alex
   m_EditorClassIdentifier: 
-  AffectedRoom: {fileID: 11400000, guid: a517cc4759e3aed48a33e17d98c264f4, type: 2}
-  AffectedCharacter: {fileID: 0}
+  AffectedRoom: {fileID: 11400000, guid: 882af9c4837138a4488c44261e1d65cb, type: 2}
+  AffectedCharacter: {fileID: 11400000, guid: 435682dfeb6aaf043ae332a54d109936, type: 2}
   MinGameTime: 1
   Chance: 20
-  StartSubtitles: Hey Gentry, can you turn on the light for me, please?
+  StartSubtitles: Gentry. Lights on.
   StartClip: {fileID: 8300000, guid: 7f5ae35c6aab2044a92dd78fafb056a9, type: 3}
   Duration: 40
   NecessaryMinEnergy: 10
-  ReminderSubtitles: Gentry. Maybe you didn't understand me. But I would like some
-    light.
+  ReminderSubtitles: It's still dark in here, Gentry. Where's the light?
   ReminderClip: {fileID: 8300000, guid: 65c7085bf435edc4a91c79f22ee50ada, type: 3}
-  LastReminderSubtitles: Es ist hier immernoch dunkel. Wo ist das Licht?
+  LastReminderSubtitles: Turn ON the light or I'll turn you OFF, Gentry!
   LastReminderClip: {fileID: 8300000, guid: 9e7d46c286cd237428e27355eaa990c0, type: 3}
   IsExecuted: 0
   FailTimer: 0

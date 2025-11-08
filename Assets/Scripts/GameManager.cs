@@ -19,9 +19,6 @@ public class GameManager : MonoBehaviour
     public List<Room> Rooms;
     public List<Task> Tasks;
     public TMP_Text SubtitleLabel;
-    [TextArea]
-    public string GameOverSubtitles;
-    public AudioClip GameOverClip;
     public AudioSource VoiceSource;
 
     [Header ("Runtime")]
@@ -200,8 +197,8 @@ public class GameManager : MonoBehaviour
         task.FailStrikes++;
         if (task.FailStrikes >= MaxTaskFails)
         {
-            SubtitleLabel.text = GameOverSubtitles;
-            VoiceSource.PlayOneShot(GameOverClip);
+            SubtitleLabel.text = task.AffectedCharacter.GameOverSubtitles;
+            VoiceSource.PlayOneShot(task.AffectedCharacter.GameOverClip);
         }
         else if (task.FailStrikes == MaxTaskFails - 1)
         {

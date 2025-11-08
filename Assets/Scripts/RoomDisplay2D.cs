@@ -7,6 +7,22 @@ public class RoomDisplay2D : RoomDisplay
     public TMP_Text TaskLabel;
     public Button ExecuteButton;
     
+    private void Update()
+    {
+        if (pressed)
+            Room.TransferEnergy();
+
+        Task task = GameManager.Instance.CurrentTasks.Find(obj => obj.AffectedRoom == Room);
+        if (task != null && task.IsExecuted)
+        {
+            TimerLabel.text = Mathf.RoundToInt(task.SuccessTimer) + "/" + task.Duration;
+        }
+        else
+        {
+            TimerLabel.text = string.Empty;
+        }
+    }
+
     protected override void Refresh()
     {
         Label.text = Room.name + ": " + Mathf.RoundToInt(Room.Energy) + "%";

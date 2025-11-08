@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0621f80b64d0527478b147591016f8fa, type: 3}
   m_Name: Linus
   m_EditorClassIdentifier: 
+  GameOverSubtitles: GAME OVER
+  GameOverClip: {fileID: 8300000, guid: 028361444ba734e4da607b9b1a0b6df0, type: 3}

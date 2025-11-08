@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a17b394eec47aa24cb9ccfd47ad24b28, type: 3}
-  m_Name: DoorOpenCockpit
+  m_Name: DoorOpenCockpit_Jenny
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 991e04d38531b1844918b33e39ffa05f, type: 2}
-  AffectedCharacter: {fileID: 0}
+  AffectedCharacter: {fileID: 11400000, guid: f4db474119a7e49428e96caae8bc5b9d, type: 2}
   MinGameTime: 1
   Chance: 20
-  StartSubtitles: "Gentry. Mach die T\xFCr auf."
-  StartClip: {fileID: 8300000, guid: d396bd73f82c65e43a485d8849224e9d, type: 3}
+  StartSubtitles: Gentry, open the door.
+  StartClip: {fileID: 8300000, guid: b407de8e1ede44a8b98a142605a367aa, type: 3}
   Duration: 3
   NecessaryMinEnergy: 15
-  ReminderSubtitles: "Gentry. Ich muss da rein. Die T\xFCr. Auf."
-  ReminderClip: {fileID: 8300000, guid: d2abdd8c6dc905d4c974ac8e5d8adf9e, type: 3}
-  LastReminderSubtitles: "Oh mein Gott, Gentry. Mach! Jetzt! Die! T\xFCr! Auf!"
-  LastReminderClip: {fileID: 8300000, guid: f4f79b2a106e3cb479f4469fd20d83d7, type: 3}
+  ReminderSubtitles: Gentry, I'm still waiting at this door.
+  ReminderClip: {fileID: 8300000, guid: 48324fedb604342609159345cda7bc27, type: 3}
+  LastReminderSubtitles: Gentry, open the door now.
+  LastReminderClip: {fileID: 8300000, guid: 571864675a2494548b166bfbdf562e63, type: 3}
   IsExecuted: 1
   FailTimer: 4.7592473
   FailStrikes: 0
