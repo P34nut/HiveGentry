@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 991e04d38531b1844918b33e39ffa05f, type: 2}
   MinGameTime: 2
-  Chance: 50
+  Chance: 25
   StartSubtitles: "Gentry. Mach die T\xFCr auf."
+  StartClip: {fileID: 8300000, guid: 8f03cc6dc660cfb41a8256cd7a2a5caa, type: 3}
   Duration: 3
-  NecessaryMinEnergy: 25
+  NecessaryMinEnergy: 15
   ReminderSubtitles: "Gentry. Ich muss da rein. Die T\xFCr. Auf."
-  IsExecuted: 0
-  FailTimer: 0
-  SuccessTimer: 0
+  ReminderClip: {fileID: 8300000, guid: 99bb9d9d1ee3d9a469a76e4c427267ae, type: 3}
+  IsExecuted: 1
+  FailTimer: 2.1246817
+  SuccessTimer: 1.2678608
