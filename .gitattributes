@@ -1,0 +1,46 @@
+# Einheitliche Zeilenenden
+* text=auto
+
+# --- Textdateien in Unity (immer LF) ---
+*.cs text eol=lf
+*.shader text eol=lf
+*.cginc text eol=lf
+*.compute text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.txt text eol=lf
+*.meta text eol=lf
+*.asmdef text eol=lf
+*.asset text eol=lf
+*.prefab text eol=lf
+*.mat text eol=lf
+*.anim text eol=lf
+*.unity text eol=lf
+*.uxml text eol=lf
+*.uss text eol=lf
+*.csproj text eol=lf
+*.sln text eol=lf
+
+# --- Binärdateien niemals verändern ---
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.tga binary
+*.psd binary
+*.fbx binary
+*.obj binary
+*.dll binary
+*.exe binary
+*.unitypackage binary
+*.zip binary
+*.mp3 binary
+*.wav binary
+*.ogg binary
+*.mp4 binary
+*.mov binary
+*.ttf binary
+*.otf binary
+*.a binary
+*.so binary
+*.dylib binary
