@@ -10,6 +10,7 @@ public class Task : ScriptableObject
     public float Chance;
     [TextArea]
     public string StartSubtitles;
+    public AudioClip StartClip;
 
     [Header("Progress")]
     public float Duration = 30f;
@@ -17,6 +18,7 @@ public class Task : ScriptableObject
     public float NecessaryMinEnergy;
     [TextArea]
     public string ReminderSubtitles;
+    public AudioClip ReminderClip;
 
     [Header("Runtime")]
     public bool IsExecuted;
