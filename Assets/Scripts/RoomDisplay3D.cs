@@ -7,12 +7,15 @@ public class RoomDisplay3D : RoomDisplay
     public MeshCollider _doorCollider;
     protected override void Refresh()
     {
-        Label.text = Mathf.RoundToInt(Room.Energy) + "%";
+        ProgressBar.currentEnergyPercent = Room.Energy;
+        //Label.text = Mathf.RoundToInt(Room.Energy) + "%";
         Task task = GameManager.Instance.CurrentTasks.Find(obj => obj.AffectedRoom == Room);
-        
+
+        ProgressBar.showRequiredEnergy = task != null;
         if (task != null)
         {
-            Label.text = Mathf.RoundToInt(Room.Energy) + "/" + task.NecessaryMinEnergy + "%";
+            ProgressBar.requiredEnergyPercent = task.NecessaryMinEnergy;
+            //Label.text = Mathf.RoundToInt(Room.Energy) + "/" + task.NecessaryMinEnergy + "%";
             //ExecuteButton.gameObject.SetActive(!task.IsExecuted && task.AreConditionsMet());
         }
     }
