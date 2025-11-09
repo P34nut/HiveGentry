@@ -16,4 +16,9 @@ public class Lamp : ClickableObject
         yield return new WaitForSeconds(task.Duration);
         Light.enabled = false;
     }
+
+    public override void StopAnimation(Task task)
+    {
+        Light.enabled = false;
+    }
 }

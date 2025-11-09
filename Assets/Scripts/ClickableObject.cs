@@ -37,13 +37,27 @@ public class ClickableObject : MonoBehaviour
         {
             if (task.IsTaskActive ())
             {
-                _collider.enabled = !task.IsExecuted && task.AreConditionsMet();
+                bool b = !task.IsExecuted && task.AreConditionsMet();
+                _collider.enabled = b;
+                if (!b)
+                {
+                    StopAnimation(task);
+                }
                 return;
             }
         }
         _collider.enabled = false;
     }
 
+    public virtual void StopAnimation(Task task)
+    {
+        if (isAnimating)
+        {
+            StopCoroutine(DoAnimation(task));
+            Animation.Stop();
+        }
+    }
+    
     public void OnMouseDown()
     {
         foreach (Task task in Tasks)
