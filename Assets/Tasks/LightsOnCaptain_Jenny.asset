@@ -15,10 +15,10 @@ MonoBehaviour:
   AffectedRoom: {fileID: 11400000, guid: 87da5891bde13174ea88b4e7563b5d31, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: f4db474119a7e49428e96caae8bc5b9d, type: 2}
   MinGameTime: 3
-  Chance: 25
+  Chance: 35
   StartSubtitles: Gentry, turn on the light
   StartClip: {fileID: 8300000, guid: 44595fd9eb4c845969d8eaf05e988a0d, type: 3}
-  Duration: 25
+  Duration: 20
   NecessaryMinEnergy: 10
   ReminderSubtitles: Gentry, I asked you to turn on the light.
   ReminderClip: {fileID: 8300000, guid: 114b1ed59fed04ae4a6c4bec760290c7, type: 3}

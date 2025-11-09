@@ -45,16 +45,18 @@ public class Bar : MonoBehaviour
         }
 
         executedObject.SetActive(showExecuted);
-        taskObject.SetActive(showRequiredEnergy);
-
+        
         if (showRequiredEnergy)
         {
             timer += Time.deltaTime;
-            if (timer >= 1f)
+            if (timer >= 0.5f)
             {
                 timer = 0f;
                 taskObject.SetActive(!taskObject.activeSelf);
             }
+        } else
+        {
+            taskObject.SetActive(false);
         }
     }
 }
