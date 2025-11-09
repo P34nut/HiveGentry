@@ -15,8 +15,12 @@ public class RoomDisplay3D : RoomDisplay
         if (task != null)
         {
             ProgressBar.requiredEnergyPercent = task.NecessaryMinEnergy;
+            ProgressBar.showExecuted = task.IsExecuted;
             //Label.text = Mathf.RoundToInt(Room.Energy) + "/" + task.NecessaryMinEnergy + "%";
             //ExecuteButton.gameObject.SetActive(!task.IsExecuted && task.AreConditionsMet());
+        } else
+        {
+            ProgressBar.showExecuted = false;
         }
     }
 
