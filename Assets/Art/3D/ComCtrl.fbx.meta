@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 16ba2253a78cf423f8b9505cc362e7f4
+guid: ad65a0217a04248549f37e6c9139351d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Shelf.001
-    second: {fileID: 2100000, guid: 06e17a46c978c4e508ed2a9e0fdcb1ae, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

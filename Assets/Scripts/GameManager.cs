@@ -223,7 +223,7 @@ public class GameManager : MonoBehaviour
         if (task.FailStrikes >= MaxTaskFails)
         {
             #if UNITY_EDITOR
-            EditorApplication.isPlaying = false;
+            //EditorApplication.isPlaying = false;
             # else
             Application.Quit ();
             #endif

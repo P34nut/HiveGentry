@@ -1,8 +1,9 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ClickableObject : MonoBehaviour
 {
-    public Task task;
+    public List<Task> Tasks;
     public MeshCollider _collider;
 
     void OnEnable()
@@ -26,14 +27,26 @@ public class ClickableObject : MonoBehaviour
 
     public void Refresh()
     {
-        _collider.enabled = !task.IsExecuted && task.AreConditionsMet();
+        foreach (Task task in Tasks)
+        {
+            if (task.IsTaskActive ())
+            {
+                _collider.enabled = !task.IsExecuted && task.AreConditionsMet();
+                return;
+            }
+        }
+        _collider.enabled = false;
     }
 
     public void OnMouseDown()
     {
-        if (task != null)
+        foreach (Task task in Tasks)
         {
-            GameManager.Instance.ExecuteTask(task);
+            if (task.IsTaskActive () && !task.IsExecuted && task.AreConditionsMet())
+            {
+                GameManager.Instance.ExecuteTask(task);
+                return;
+            }
         }
     }
 }
