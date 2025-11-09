@@ -2138,6 +2138,48 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2189823357461682244, guid: 78602004ca0f544f087e57cee8356988, type: 3}
+--- !u!1 &901728310 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4662126219726597641, guid: 6aa413879e8054b49b60f57a77da908b, type: 3}
+  m_PrefabInstance: {fileID: 6370783180843472653}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &901728314
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901728310}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2936563634469134186, guid: 6508c627f13f04287b828c35a4b856ff, type: 3}
+--- !u!114 &901728315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901728310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9733e533a38e46a47a01da65b902f4d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tasks:
+  - {fileID: 11400000, guid: d3fadb4c81ea24d42b1e8e35abda3f4b, type: 2}
+  _collider: {fileID: 901728314}
 --- !u!1 &913261782
 GameObject:
   m_ObjectHideFlags: 0
@@ -4002,7 +4044,7 @@ PrefabInstance:
       objectReference: {fileID: 521065536}
     - target: {fileID: 4669204005581507927, guid: 2f3f0f26773461b46a88e1fc68fe8352, type: 3}
       propertyPath: Tasks.Array.size
-      value: 25
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 4669204005581507927, guid: 2f3f0f26773461b46a88e1fc68fe8352, type: 3}
       propertyPath: 'Tasks.Array.data[0]'
@@ -4104,6 +4146,10 @@ PrefabInstance:
       propertyPath: 'Tasks.Array.data[24]'
       value: 
       objectReference: {fileID: 11400000, guid: 6d965282efd0fc5448f3c5ef9209600f, type: 2}
+    - target: {fileID: 4669204005581507927, guid: 2f3f0f26773461b46a88e1fc68fe8352, type: 3}
+      propertyPath: 'Tasks.Array.data[25]'
+      value: 
+      objectReference: {fileID: 11400000, guid: d3fadb4c81ea24d42b1e8e35abda3f4b, type: 2}
     - target: {fileID: 5738009706770410705, guid: 2f3f0f26773461b46a88e1fc68fe8352, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5663,6 +5709,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 439112764299988658, guid: 6aa413879e8054b49b60f57a77da908b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 655163280}
+    - targetCorrespondingSourceObject: {fileID: 4662126219726597641, guid: 6aa413879e8054b49b60f57a77da908b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 901728315}
+    - targetCorrespondingSourceObject: {fileID: 4662126219726597641, guid: 6aa413879e8054b49b60f57a77da908b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 901728314}
     - targetCorrespondingSourceObject: {fileID: 229775521769658428, guid: 6aa413879e8054b49b60f57a77da908b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 536259011}
