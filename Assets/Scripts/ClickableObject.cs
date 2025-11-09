@@ -108,7 +108,7 @@ if (highlighter != null)
 
         float offsetY = Mathf.Sin(Time.time * speed) * amplitude;
 
-        Vector3 basePos = transform.position + Vector3.up * 2f;
+        Vector3 basePos = transform.position + Vector3.up * 1.25f;
             highlighter.transform.position = basePos + new Vector3(0, offsetY, 0);
         }
     }

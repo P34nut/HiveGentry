@@ -2890,6 +2890,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main
       objectReference: {fileID: 0}
+    - target: {fileID: 1756489556110454641, guid: 2f3f0f26773461b46a88e1fc68fe8352, type: 3}
+      propertyPath: roomStems.Array.data[0].energyThreshold
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1756489556110454641, guid: 2f3f0f26773461b46a88e1fc68fe8352, type: 3}
+      propertyPath: roomStems.Array.data[1].energyThreshold
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1756489556110454641, guid: 2f3f0f26773461b46a88e1fc68fe8352, type: 3}
+      propertyPath: roomStems.Array.data[2].energyThreshold
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1756489556110454641, guid: 2f3f0f26773461b46a88e1fc68fe8352, type: 3}
+      propertyPath: roomStems.Array.data[4].energyThreshold
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1756489556110454641, guid: 2f3f0f26773461b46a88e1fc68fe8352, type: 3}
+      propertyPath: roomStems.Array.data[5].energyThreshold
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1756489556110454641, guid: 2f3f0f26773461b46a88e1fc68fe8352, type: 3}
+      propertyPath: roomStems.Array.data[6].energyThreshold
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4669204005581507927, guid: 2f3f0f26773461b46a88e1fc68fe8352, type: 3}
       propertyPath: GameOverClip
       value: 
