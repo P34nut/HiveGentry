@@ -12,6 +12,8 @@ public class ClickableObject : MonoBehaviour
     [HideInInspector] public float XRotation;
     [HideInInspector] public bool isAnimating;
 
+    private GameObject highlighter;
+
     void OnEnable()
     {
         GameManager.Instance.OnEnergyChanged += Refresh;
@@ -29,6 +31,10 @@ public class ClickableObject : MonoBehaviour
     void Awake()
     {
         _collider = GetComponent<Collider>();
+        highlighter = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        highlighter.transform.localScale = Vector3.one * 0.3f;
+        highlighter.transform.position = transform.position + Vector3.up;
+        highlighter.SetActive(false);
     }
 
     public void Refresh()
@@ -37,7 +43,9 @@ public class ClickableObject : MonoBehaviour
         {
             if (task.IsTaskActive ())
             {
-                _collider.enabled =  !task.IsExecuted && task.AreConditionsMet();;
+                _collider.enabled = !task.IsExecuted && task.AreConditionsMet();
+                highlighter.SetActive(_collider.enabled);
+
                 if (!task.AreConditionsMet())
                 {
                     StopAnimation(task);
@@ -88,6 +96,20 @@ public class ClickableObject : MonoBehaviour
         if (isAnimating)
         {
             transform.localEulerAngles = new Vector3(XRotation, transform.localEulerAngles.y, transform.localEulerAngles.z);
+        }
+
+
+if (highlighter != null)
+                {
+            
+        
+        float speed = 2f * Mathf.PI;
+        float amplitude = 0.5f;
+
+        float offsetY = Mathf.Sin(Time.time * speed) * amplitude;
+
+        Vector3 basePos = transform.position + Vector3.up * 2f;
+            highlighter.transform.position = basePos + new Vector3(0, offsetY, 0);
         }
     }
 }
