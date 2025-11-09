@@ -6,7 +6,7 @@ using UnityEngine;
 public class ClickableObject : MonoBehaviour
 {
     public List<Task> Tasks;
-    public MeshCollider _collider;
+    public Collider _collider;
     public Animation Animation;
 
     [HideInInspector] public float XRotation;
@@ -28,7 +28,7 @@ public class ClickableObject : MonoBehaviour
 
     void Awake()
     {
-        _collider = GetComponent<MeshCollider>();
+        _collider = GetComponent<Collider>();
     }
 
     public void Refresh()
