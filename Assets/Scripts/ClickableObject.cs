@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -44,9 +45,15 @@ public class ClickableObject : MonoBehaviour
         {
             if (task.IsTaskActive () && !task.IsExecuted && task.AreConditionsMet())
             {
+                StartCoroutine(DoAnimation(task));
                 GameManager.Instance.ExecuteTask(task);
                 return;
             }
         }
+    }
+    
+    public virtual IEnumerator DoAnimation(Task task)
+    {
+        yield return null;
     }
 }
