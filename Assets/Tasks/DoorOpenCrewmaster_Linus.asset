@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a17b394eec47aa24cb9ccfd47ad24b28, type: 3}
-  m_Name: Shield_Linus
+  m_Name: DoorOpenCrewmaster_Linus
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 991e04d38531b1844918b33e39ffa05f, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: dec28441b5a5cc644ac599af6e560f16, type: 2}
   MinGameTime: 1
-  Chance: 100
-  StartSubtitles: Enemy at 3 o'clock. Activate shields.
-  StartClip: {fileID: 8300000, guid: ec8e1a324db65574a8148a6fe9350284, type: 3}
-  Duration: 90
-  NecessaryMinEnergy: 50
-  ReminderSubtitles: We are getting shot now. Where are the shields.
-  ReminderClip: {fileID: 8300000, guid: e8e5043f4e624c24da9a7f12a3cc5852, type: 3}
-  LastReminderSubtitles: If we receive more Damage we will go down. More shields.
-  LastReminderClip: {fileID: 8300000, guid: 0dd3c298a6ec5734987e2e51c848bcf1, type: 3}
-  IsExecuted: 0
-  FailTimer: 0
+  Chance: 20
+  StartSubtitles: Gentry open the door on my 12, over.
+  StartClip: {fileID: 8300000, guid: b05a4c1c406ec314794f51bc058c75a4, type: 3}
+  Duration: 3
+  NecessaryMinEnergy: 15
+  ReminderSubtitles: Private why is the door not open?
+  ReminderClip: {fileID: 8300000, guid: 87d3e6a83fed6b34fa1079f4036e9ac4, type: 3}
+  LastReminderSubtitles: Open the door or i will breach it.
+  LastReminderClip: {fileID: 8300000, guid: 4a95721df8ade9d4da08ebd1f148639a, type: 3}
+  IsExecuted: 1
+  FailTimer: 4.7592473
   FailStrikes: 0
-  SuccessTimer: 0
+  SuccessTimer: 3.0082753
