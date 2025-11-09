@@ -17,14 +17,14 @@ MonoBehaviour:
   MinGameTime: 1
   Chance: 35
   StartSubtitles: Gentry, please make me a coffee.
-  StartClip: {fileID: 8300000, guid: 73d9296d3c6aa4cb2895251aeadce965, type: 3}
+  StartClip: {fileID: 8300000, guid: f51b74e8b1ecb5942ad828228cab1c43, type: 3}
   Duration: 15
   NecessaryMinEnergy: 40
   ReminderSubtitles: Gentry, I'm still waiting for my coffee.
-  ReminderClip: {fileID: 8300000, guid: 106cd3534310a40e2af927db313a3e0f, type: 3}
+  ReminderClip: {fileID: 8300000, guid: 575df433602a5c4489ff607a73a50151, type: 3}
   LastReminderSubtitles: Gentry, where's my coffee?
-  LastReminderClip: {fileID: 8300000, guid: ca6815ebcd9aa41709c34a7b65c0cdc6, type: 3}
+  LastReminderClip: {fileID: 8300000, guid: 25d10625b4547354aaa8b32b76b96043, type: 3}
   IsExecuted: 0
-  FailTimer: 10.046043
-  FailStrikes: 2
+  FailTimer: 0
+  FailStrikes: 0
   SuccessTimer: 0

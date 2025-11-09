@@ -17,14 +17,14 @@ MonoBehaviour:
   MinGameTime: 15
   Chance: 40
   StartSubtitles: Gentry, give me power for the repair drone.
-  StartClip: {fileID: 8300000, guid: f90d5a245c5150d4496126d0f7aba186, type: 3}
+  StartClip: {fileID: 8300000, guid: 05fddaffb5c2e75478b74477f9cf96e9, type: 3}
   Duration: 25
   NecessaryMinEnergy: 30
   ReminderSubtitles: I can't fucking work like this, Gentry. The repair drone still
     needs power!
-  ReminderClip: {fileID: 8300000, guid: 8251594f2a30c1e4997fdb982a46b9dd, type: 3}
+  ReminderClip: {fileID: 8300000, guid: 3380bc06bace1dc419f4658d4db74848, type: 3}
   LastReminderSubtitles: If you don't start that damn drone I'll kill you!
-  LastReminderClip: {fileID: 8300000, guid: 884c910925f28404e8ccf5d58977b18e, type: 3}
+  LastReminderClip: {fileID: 8300000, guid: b62e9550d34d0e3488370a5d13c9f0b0, type: 3}
   IsExecuted: 0
   FailTimer: 0
   FailStrikes: 0
