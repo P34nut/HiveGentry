@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class Door : ClickableObject
 {
-   public Animation Animation;
-
    public float YPosition;
-   public bool isAnimating;
    
    public override IEnumerator DoAnimation(Task task)
    {

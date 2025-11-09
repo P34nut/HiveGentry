@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,10 @@ public class ClickableObject : MonoBehaviour
 {
     public List<Task> Tasks;
     public MeshCollider _collider;
+    public Animation Animation;
+
+    [HideInInspector] public float XRotation;
+    [HideInInspector] public bool isAnimating;
 
     void OnEnable()
     {
@@ -54,6 +59,21 @@ public class ClickableObject : MonoBehaviour
     
     public virtual IEnumerator DoAnimation(Task task)
     {
+        if (Animation != null)
+        {
+            Animation.Play();
+            yield return new WaitForSeconds(task.Duration);
+            Animation.Stop();
+        }
+        
         yield return null;
+    }
+
+    private void Update()
+    {
+        if (isAnimating)
+        {
+            transform.localEulerAngles = new Vector3(XRotation, transform.localEulerAngles.y, transform.localEulerAngles.z);
+        }
     }
 }
