@@ -38,9 +38,14 @@ public class Task : ScriptableObject
         SuccessTimer = 0f;
     }
 
-    public bool AreConditionsMet ()
+    public bool AreConditionsMet()
     {
-        if (!GameManager.Instance.CurrentTasks.Contains(this)) return false;
+        if (!IsTaskActive ()) return false;
         return AffectedRoom.Energy >= NecessaryMinEnergy;
+    }
+    
+    public bool IsTaskActive ()
+    {
+        return GameManager.Instance.CurrentTasks.Contains(this);
     }
 }
