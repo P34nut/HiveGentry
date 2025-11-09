@@ -16,14 +16,15 @@ MonoBehaviour:
   AffectedCharacter: {fileID: 11400000, guid: 2e3e5063cdfffdf43aedc81891e9bdbe, type: 2}
   MinGameTime: 15
   Chance: 25
-  StartSubtitles: Gentry, give me power for the repair drone.
+  StartSubtitles: Gentry, would you be a dear and flush the toilet for me?
   StartClip: {fileID: 8300000, guid: 05fddaffb5c2e75478b74477f9cf96e9, type: 3}
   Duration: 6
   NecessaryMinEnergy: 25
-  ReminderSubtitles: I can't fucking work like this, Gentry. The repair drone still
-    needs power!
+  ReminderSubtitles: "I\u2019m sorry, I feel a bit awkward asking again, could you
+    please flush the toilet?"
   ReminderClip: {fileID: 8300000, guid: 3380bc06bace1dc419f4658d4db74848, type: 3}
-  LastReminderSubtitles: If you don't start that damn drone I'll kill you!
+  LastReminderSubtitles: "Look, I really don\u2019t mean to rush you, but I also
+    don\u2019t want to just leave,so \u2026 please just flush the toilet"
   LastReminderClip: {fileID: 8300000, guid: b62e9550d34d0e3488370a5d13c9f0b0, type: 3}
   IsExecuted: 0
   FailTimer: 0

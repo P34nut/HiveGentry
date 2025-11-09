@@ -16,13 +16,14 @@ MonoBehaviour:
   AffectedCharacter: {fileID: 11400000, guid: 2e3e5063cdfffdf43aedc81891e9bdbe, type: 2}
   MinGameTime: 1
   Chance: 20
-  StartSubtitles: Gentry, open the door.
+  StartSubtitles: Hiya Gentry, one open door please.
   StartClip: {fileID: 8300000, guid: b3842e1c5fd17ed4597814cf14fb2e4b, type: 3}
   Duration: 3
   NecessaryMinEnergy: 15
-  ReminderSubtitles: I'm still standing here in front of the locked door, Gentry.
+  ReminderSubtitles: Just a reminder, still need that door open.
   ReminderClip: {fileID: 8300000, guid: 9600e9c6c04b9b9418ee1cfdf47b3957, type: 3}
-  LastReminderSubtitles: I want to get in there now. Open the damn door!
+  LastReminderSubtitles: "Look, I don\u2019t mean to be rude, but please open the
+    door."
   LastReminderClip: {fileID: 8300000, guid: bc0984d8cd9646b428bc398af3225ad9, type: 3}
   IsExecuted: 0
   FailTimer: 0

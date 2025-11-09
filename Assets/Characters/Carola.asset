@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0621f80b64d0527478b147591016f8fa, type: 3}
   m_Name: Carola
   m_EditorClassIdentifier: 
-  GameOverSubtitles: GAME OVER
-  GameOverClip: {fileID: 8300000, guid: 028361444ba734e4da607b9b1a0b6df0, type: 3}
+  GameOverSubtitles: "Oh Gentry, you know I really don\u2019t like doing this and
+    I\u2019m so, so sorry but we have to keep this ship running! So I guess we\u2019ll
+    have to reset you."
+  GameOverClip: {fileID: 8300000, guid: 6ce51701dbf59b349a5321595daf05f1, type: 3}
