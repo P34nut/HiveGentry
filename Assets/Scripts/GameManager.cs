@@ -4,6 +4,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine.Events;
 using System.Collections;
+using UnityEngine.SceneManagement;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -222,11 +223,7 @@ public class GameManager : MonoBehaviour
         
         if (task.FailStrikes >= MaxTaskFails)
         {
-            #if UNITY_EDITOR
-            //EditorApplication.isPlaying = false;
-            # else
-            Application.Quit ();
-            #endif
+            SceneManager.LoadScene(sceneBuildIndex: 2);
         }
     }
 }

@@ -12,10 +12,15 @@ public class MainMenu : MonoBehaviour
 
     public void OnQuitClicked()
     {
+#if UNITY_WEBGL
+            
+#endif
+            
+            
 #if UNITY_EDITOR
         EditorApplication.isPlaying = false;
 # else
-        Application.Quit ();
+         Application.OpenURL("about:blank");
 #endif
     }
 
