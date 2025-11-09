@@ -40,7 +40,7 @@ public class Task : ScriptableObject
 
     public bool AreConditionsMet()
     {
-        if (!IsTaskActive ()) return false;
+        //if (!IsTaskActive ()) return false;
         return AffectedRoom.Energy >= NecessaryMinEnergy;
     }
     
