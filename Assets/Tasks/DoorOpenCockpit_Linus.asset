@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17b394eec47aa24cb9ccfd47ad24b28, type: 3}
+  m_Name: DoorOpenCockpit_Linus
+  m_EditorClassIdentifier: 
+  AffectedRoom: {fileID: 11400000, guid: 991e04d38531b1844918b33e39ffa05f, type: 2}
+  AffectedCharacter: {fileID: 11400000, guid: dec28441b5a5cc644ac599af6e560f16, type: 2}
+  MinGameTime: 1
+  Chance: 20
+  StartSubtitles: Gentry open the door on my 12, over.
+  StartClip: {fileID: 8300000, guid: b05a4c1c406ec314794f51bc058c75a4, type: 3}
+  Duration: 3
+  NecessaryMinEnergy: 15
+  ReminderSubtitles: Private why is the door not open?
+  ReminderClip: {fileID: 8300000, guid: 87d3e6a83fed6b34fa1079f4036e9ac4, type: 3}
+  LastReminderSubtitles: Open the door or i will breach it.
+  LastReminderClip: {fileID: 8300000, guid: 4a95721df8ade9d4da08ebd1f148639a, type: 3}
+  IsExecuted: 1
+  FailTimer: 4.7592473
+  FailStrikes: 0
+  SuccessTimer: 3.0082753

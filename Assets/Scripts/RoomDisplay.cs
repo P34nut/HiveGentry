@@ -4,8 +4,7 @@ using UnityEngine;
 public class RoomDisplay : MonoBehaviour
 {
     public Room Room;
-    public TMP_Text Label;
-    public TMP_Text TimerLabel;
+    public Bar ProgressBar;
 
     protected bool pressed;
 
@@ -28,7 +27,7 @@ public class RoomDisplay : MonoBehaviour
         if (pressed)
             Room.TransferEnergy();
 
-        Task task = GameManager.Instance.CurrentTasks.Find(obj => obj.AffectedRoom == Room);
+        /*Task task = GameManager.Instance.CurrentTasks.Find(obj => obj.AffectedRoom == Room);
         if (task != null && task.IsExecuted)
         {
             TimerLabel.text = Mathf.RoundToInt(task.SuccessTimer) + "/" + task.Duration;
@@ -36,7 +35,7 @@ public class RoomDisplay : MonoBehaviour
         else
         {
             TimerLabel.text = string.Empty;
-        }
+        }*/
     }
 
     protected virtual void Refresh() { }

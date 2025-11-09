@@ -50,6 +50,7 @@ MonoBehaviour:
   EnergyTransferRate: 6
   TaskCheckTime: 1
   TaskReminderTime: 12
+  MaxTaskFails: 3
   Rooms:
   - {fileID: 11400000, guid: 882af9c4837138a4488c44261e1d65cb, type: 2}
   - {fileID: 11400000, guid: 991e04d38531b1844918b33e39ffa05f, type: 2}
@@ -60,22 +61,35 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 87da5891bde13174ea88b4e7563b5d31, type: 2}
   Tasks:
   - {fileID: 11400000, guid: 7ca75e9ecdae1754b8fc695c8a73c5df, type: 2}
-  - {fileID: 11400000, guid: 5365a29903ce95340ac0edc6a8da9dd9, type: 2}
-  - {fileID: 11400000, guid: d131273bd2edfd34986de8ecc12c3d79, type: 2}
+  - {fileID: 11400000, guid: 348dad28bc085674a889f67eaed236ef, type: 2}
+  - {fileID: 11400000, guid: 6af6843459008fa47a1f4fdf35e9cb46, type: 2}
+  - {fileID: 11400000, guid: 49166e23d6f53a148accfefab22a7020, type: 2}
+  - {fileID: 11400000, guid: b983c5bec04a02d4d9c4c009d308393c, type: 2}
   - {fileID: 11400000, guid: 4351f74f9f99d5241af0cbffe68a8511, type: 2}
-  - {fileID: 11400000, guid: e344c9b623c50fd45b18124b8a5669d2, type: 2}
-  - {fileID: 11400000, guid: d3b6fedadd2c3c747b910b646ac5aec5, type: 2}
+  - {fileID: 11400000, guid: 9ddcb9c12dfcdf04f98e2287e2a826df, type: 2}
   - {fileID: 11400000, guid: 16285203f2aaf074a85b9c5022e931ca, type: 2}
-  - {fileID: 11400000, guid: 75317903a46736c438a41bfa012471e3, type: 2}
-  - {fileID: 11400000, guid: 5722e2480b6ff5a4ea5d3211c3075071, type: 2}
-  - {fileID: 11400000, guid: 2f5c53d441b278f45a2a1c23c7c7d375, type: 2}
-  - {fileID: 11400000, guid: 40f292b192ddb3741bbe4e616cd481cf, type: 2}
+  - {fileID: 11400000, guid: 5365a29903ce95340ac0edc6a8da9dd9, type: 2}
+  - {fileID: 11400000, guid: 43c5886c8d60ffc4fa175bb6ce9b974b, type: 2}
+  - {fileID: 11400000, guid: e344c9b623c50fd45b18124b8a5669d2, type: 2}
+  - {fileID: 11400000, guid: 344bcadb0995fcf46ad8186f0e202eb2, type: 2}
+  - {fileID: 11400000, guid: 893ae67b45fd6894498b01193965ffd8, type: 2}
+  - {fileID: 11400000, guid: d131273bd2edfd34986de8ecc12c3d79, type: 2}
   - {fileID: 11400000, guid: dac5f7899aa319a4090e51c89db06e98, type: 2}
-  - {fileID: 11400000, guid: 2f75051864f372045989d7cecd14848d, type: 2}
-  - {fileID: 11400000, guid: 84952866df661db4aa6bc8837af42866, type: 2}
+  - {fileID: 11400000, guid: 67a0587fddcd43844b1163ef5a02a712, type: 2}
   - {fileID: 11400000, guid: fd9636b5341cc4141a8013b0106c6d68, type: 2}
+  - {fileID: 11400000, guid: 2f5c53d441b278f45a2a1c23c7c7d375, type: 2}
+  - {fileID: 11400000, guid: 2f75051864f372045989d7cecd14848d, type: 2}
+  - {fileID: 11400000, guid: 2efff4f9b4ad70a4486ba88e8cc0846e, type: 2}
+  - {fileID: 11400000, guid: 0e6982ca3b911804baf402ba12f87d5b, type: 2}
+  - {fileID: 11400000, guid: 40f292b192ddb3741bbe4e616cd481cf, type: 2}
+  - {fileID: 11400000, guid: 5722e2480b6ff5a4ea5d3211c3075071, type: 2}
+  - {fileID: 11400000, guid: 0cb87c875da32564fbb13cee8816ab0a, type: 2}
+  - {fileID: 11400000, guid: 73ed64ce985e4d04685f14f0607abf90, type: 2}
+  - {fileID: 11400000, guid: 75317903a46736c438a41bfa012471e3, type: 2}
   - {fileID: 11400000, guid: 57119f601999cf34597519d0b62517d3, type: 2}
+  - {fileID: 11400000, guid: d3fadb4c81ea24d42b1e8e35abda3f4b, type: 2}
   - {fileID: 11400000, guid: a3da5c6719b60fc498f5d6e4ec11bf18, type: 2}
+  - {fileID: 11400000, guid: 6d965282efd0fc5448f3c5ef9209600f, type: 2}
   SubtitleLabel: {fileID: 0}
   VoiceSource: {fileID: 4318127147794833355}
   CurrentTasks: []

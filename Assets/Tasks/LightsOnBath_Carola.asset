@@ -16,14 +16,14 @@ MonoBehaviour:
   AffectedCharacter: {fileID: 11400000, guid: 2e3e5063cdfffdf43aedc81891e9bdbe, type: 2}
   MinGameTime: 1
   Chance: 20
-  StartSubtitles: Gentry. Lights on.
-  StartClip: {fileID: 8300000, guid: 7f5ae35c6aab2044a92dd78fafb056a9, type: 3}
+  StartSubtitles: Hi Gentry, please turn on the light for me.
+  StartClip: {fileID: 8300000, guid: 115f223888aa18c40ba251fa25b54fc6, type: 3}
   Duration: 40
   NecessaryMinEnergy: 10
-  ReminderSubtitles: It's still dark in here, Gentry. Where's the light?
-  ReminderClip: {fileID: 8300000, guid: 65c7085bf435edc4a91c79f22ee50ada, type: 3}
-  LastReminderSubtitles: Turn ON the light or I'll turn you OFF, Gentry!
-  LastReminderClip: {fileID: 8300000, guid: 9e7d46c286cd237428e27355eaa990c0, type: 3}
+  ReminderSubtitles: Gentry? Lights please.
+  ReminderClip: {fileID: 8300000, guid: ebe799eb380e23d469d6e0a3f5455011, type: 3}
+  LastReminderSubtitles: Me again, still waiting for the lights to turn on.
+  LastReminderClip: {fileID: 8300000, guid: ea1d35428002987438012b7d85b0fbdd, type: 3}
   IsExecuted: 0
   FailTimer: 0
   FailStrikes: 0

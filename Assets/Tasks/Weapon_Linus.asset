@@ -13,19 +13,17 @@ MonoBehaviour:
   m_Name: Weapon_Linus
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 991e04d38531b1844918b33e39ffa05f, type: 2}
-  AffectedCharacter: {fileID: 0}
+  AffectedCharacter: {fileID: 11400000, guid: dec28441b5a5cc644ac599af6e560f16, type: 2}
   MinGameTime: 25
   Chance: 100
-  StartSubtitles: Wir werden angegriffen. Gentry, wir brauchen Energie in den Waffensystemen!
-  StartClip: {fileID: 8300000, guid: 8f03cc6dc660cfb41a8256cd7a2a5caa, type: 3}
+  StartSubtitles: Enemy spotted. Need Energy on the weapons.
+  StartClip: {fileID: 8300000, guid: 0e3b224845bf35e4f8753f8284d5e8f6, type: 3}
   Duration: 10
   NecessaryMinEnergy: 60
-  ReminderSubtitles: "Verdammt Gentry. Die schie\xDFen uns kaputt. Wir brauchen unsere
-    Waffen online! Unbedingt!"
-  ReminderClip: {fileID: 8300000, guid: 99bb9d9d1ee3d9a469a76e4c427267ae, type: 3}
-  LastReminderSubtitles: "WIR WERDEN ALLE STERBEN WENN DU NICHT DIE WAFFENSYSTEME
-    HOCHF\xC4HRST!"
-  LastReminderClip: {fileID: 8300000, guid: 99bb9d9d1ee3d9a469a76e4c427267ae, type: 3}
+  ReminderSubtitles: I can't shoot them down. I need more power.
+  ReminderClip: {fileID: 8300000, guid: 1dc4284aa88f20b4c8d0fdf555d50697, type: 3}
+  LastReminderSubtitles: The enemy is getting away. Give me the damn Energy.
+  LastReminderClip: {fileID: 8300000, guid: 1cca7b1978354474c8b264553537f28f, type: 3}
   IsExecuted: 0
   FailTimer: 0
   FailStrikes: 0
