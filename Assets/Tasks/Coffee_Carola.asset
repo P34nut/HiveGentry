@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 882af9c4837138a4488c44261e1d65cb, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: 2e3e5063cdfffdf43aedc81891e9bdbe, type: 2}
-  MinGameTime: 1
-  Chance: 35
+  MinGameTime: 3
+  Chance: 20
   StartSubtitles: Hey dear Gentry, could you make me coffee, please?
   StartClip: {fileID: 8300000, guid: f51b74e8b1ecb5942ad828228cab1c43, type: 3}
   Duration: 15

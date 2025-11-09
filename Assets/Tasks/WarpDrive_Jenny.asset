@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 112e38465e87d2a44b1a54199a7eaaad, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: f4db474119a7e49428e96caae8bc5b9d, type: 2}
-  MinGameTime: 1
-  Chance: 40
+  MinGameTime: 3
+  Chance: 60
   StartSubtitles: Gentry, launch the Warp Drive.
   StartClip: {fileID: 8300000, guid: 9157fe249e09c42edb6fa3db012c3635, type: 3}
-  Duration: 30
+  Duration: 20
   NecessaryMinEnergy: 40
   ReminderSubtitles: Gentry, the Warp Drive sequence should have started by now.
   ReminderClip: {fileID: 8300000, guid: d594b8bde601c4867a1a66c8214971de, type: 3}

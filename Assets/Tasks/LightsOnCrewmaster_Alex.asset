@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 74ff56c96ce804143ab8dcfb7f912fa2, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: 435682dfeb6aaf043ae332a54d109936, type: 2}
-  MinGameTime: 1
-  Chance: 20
+  MinGameTime: 3
+  Chance: 25
   StartSubtitles: Gentry. Lights on.
   StartClip: {fileID: 8300000, guid: 7f5ae35c6aab2044a92dd78fafb056a9, type: 3}
-  Duration: 40
+  Duration: 25
   NecessaryMinEnergy: 10
   ReminderSubtitles: It's still dark in here, Gentry. Where's the light?
   ReminderClip: {fileID: 8300000, guid: 65c7085bf435edc4a91c79f22ee50ada, type: 3}

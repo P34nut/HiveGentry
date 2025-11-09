@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 882af9c4837138a4488c44261e1d65cb, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: 435682dfeb6aaf043ae332a54d109936, type: 2}
-  MinGameTime: 1
-  Chance: 35
+  MinGameTime: 3
+  Chance: 20
   StartSubtitles: I'm so exhausted, Gentry. I really need a coffee.
   StartClip: {fileID: 8300000, guid: 9491bff2b0370574e9bba59cb8d1a648, type: 3}
   Duration: 15

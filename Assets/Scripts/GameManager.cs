@@ -180,7 +180,7 @@ public class GameManager : MonoBehaviour
         OnTaskAdded?.Invoke();
 
         float waitTimer = 0f;
-        while (waitTimer <= 3f)
+        while (waitTimer <= 4f)
         {
             waitTimer += Time.deltaTime;
             yield return null;
@@ -212,7 +212,7 @@ public class GameManager : MonoBehaviour
         }
         
         float waitTimer = 0f;
-        while (waitTimer <= 3f)
+        while (waitTimer <= 4f)
         {
             waitTimer += Time.deltaTime;
             yield return null;

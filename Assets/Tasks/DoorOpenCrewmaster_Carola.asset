@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 74ff56c96ce804143ab8dcfb7f912fa2, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: 2e3e5063cdfffdf43aedc81891e9bdbe, type: 2}
-  MinGameTime: 1
-  Chance: 20
+  MinGameTime: 3
+  Chance: 25
   StartSubtitles: Hiya Gentry, one open door please.
   StartClip: {fileID: 8300000, guid: b3842e1c5fd17ed4597814cf14fb2e4b, type: 3}
   Duration: 3

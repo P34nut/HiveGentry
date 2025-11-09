@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 74ff56c96ce804143ab8dcfb7f912fa2, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: 2e3e5063cdfffdf43aedc81891e9bdbe, type: 2}
-  MinGameTime: 15
-  Chance: 40
+  MinGameTime: 3
+  Chance: 60
   StartSubtitles: 'Hey Gentry, just got a com line request, could you please open
     a channel for me?
 
@@ -28,7 +28,7 @@ MonoBehaviour:
   LastReminderSubtitles: "I\u2019m sorry, you\u2019re probably super busy but I do
     need you to open the channel now!"
   LastReminderClip: {fileID: 8300000, guid: b62e9550d34d0e3488370a5d13c9f0b0, type: 3}
-  IsExecuted: 1
-  FailTimer: 4.7903757
-  FailStrikes: 2
-  SuccessTimer: 18.231167
+  IsExecuted: 0
+  FailTimer: 0
+  FailStrikes: 0
+  SuccessTimer: 0

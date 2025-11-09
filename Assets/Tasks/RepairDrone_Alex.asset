@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 112e38465e87d2a44b1a54199a7eaaad, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: 435682dfeb6aaf043ae332a54d109936, type: 2}
-  MinGameTime: 15
+  MinGameTime: 3
   Chance: 60
   StartSubtitles: Gentry, give me power for the repair drone.
   StartClip: {fileID: 8300000, guid: f90d5a245c5150d4496126d0f7aba186, type: 3}

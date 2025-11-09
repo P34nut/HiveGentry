@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: a517cc4759e3aed48a33e17d98c264f4, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: 435682dfeb6aaf043ae332a54d109936, type: 2}
-  MinGameTime: 1
-  Chance: 20
+  MinGameTime: 3
+  Chance: 25
   StartSubtitles: Gentry, open the door.
   StartClip: {fileID: 8300000, guid: d396bd73f82c65e43a485d8849224e9d, type: 3}
   Duration: 3

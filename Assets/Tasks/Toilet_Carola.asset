@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: a517cc4759e3aed48a33e17d98c264f4, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: 2e3e5063cdfffdf43aedc81891e9bdbe, type: 2}
-  MinGameTime: 15
-  Chance: 25
+  MinGameTime: 3
+  Chance: 60
   StartSubtitles: Gentry, would you be a dear and flush the toilet for me?
   StartClip: {fileID: 8300000, guid: 05fddaffb5c2e75478b74477f9cf96e9, type: 3}
-  Duration: 6
+  Duration: 9
   NecessaryMinEnergy: 25
   ReminderSubtitles: "I\u2019m sorry, I feel a bit awkward asking again, could you
     please flush the toilet?"

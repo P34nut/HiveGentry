@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 74ff56c96ce804143ab8dcfb7f912fa2, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: 2e3e5063cdfffdf43aedc81891e9bdbe, type: 2}
-  MinGameTime: 1
-  Chance: 20
+  MinGameTime: 3
+  Chance: 25
   StartSubtitles: Hi Gentry, please turn on the light for me.
   StartClip: {fileID: 8300000, guid: 115f223888aa18c40ba251fa25b54fc6, type: 3}
-  Duration: 40
+  Duration: 25
   NecessaryMinEnergy: 10
   ReminderSubtitles: Gentry? Lights please.
   ReminderClip: {fileID: 8300000, guid: ebe799eb380e23d469d6e0a3f5455011, type: 3}

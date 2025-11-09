@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AffectedRoom: {fileID: 11400000, guid: 882af9c4837138a4488c44261e1d65cb, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: f4db474119a7e49428e96caae8bc5b9d, type: 2}
-  MinGameTime: 1
-  Chance: 35
+  MinGameTime: 3
+  Chance: 20
   StartSubtitles: Gentry, please make me a coffee.
   StartClip: {fileID: 8300000, guid: 73d9296d3c6aa4cb2895251aeadce965, type: 3}
   Duration: 15
@@ -25,6 +25,6 @@ MonoBehaviour:
   LastReminderSubtitles: Gentry, where's my coffee?
   LastReminderClip: {fileID: 8300000, guid: ca6815ebcd9aa41709c34a7b65c0cdc6, type: 3}
   IsExecuted: 0
-  FailTimer: 10.046043
-  FailStrikes: 2
+  FailTimer: 0
+  FailStrikes: 0
   SuccessTimer: 0
