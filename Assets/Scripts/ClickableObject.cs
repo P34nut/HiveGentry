@@ -37,9 +37,8 @@ public class ClickableObject : MonoBehaviour
         {
             if (task.IsTaskActive ())
             {
-                bool b = !task.IsExecuted && task.AreConditionsMet();
-                _collider.enabled = b;
-                if (!b)
+                _collider.enabled =  !task.IsExecuted && task.AreConditionsMet();;
+                if (!task.AreConditionsMet())
                 {
                     StopAnimation(task);
                 }
@@ -55,6 +54,7 @@ public class ClickableObject : MonoBehaviour
         {
             StopCoroutine(DoAnimation(task));
             Animation.Stop();
+            isAnimating = false;
         }
     }
     
