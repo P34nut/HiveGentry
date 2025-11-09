@@ -12,11 +12,15 @@ public class Bar : MonoBehaviour
     [Range(0, 100)] public float currentEnergyPercent = 0f;
     public bool showRequiredEnergy;
     public bool showExecuted;
+    public bool showTask;
     public float maxWidth = 200f; // Maximalbreite der Balken in Pixeln
 
     [Header("Zielobjekt (wird aktiviert/deaktiviert)")]
     public GameObject targetObject; // z. B. ein Portal oder Generator
     public GameObject executedObject;
+    public GameObject taskObject;
+
+    private float timer;
 
     void Update()
     {
@@ -41,5 +45,16 @@ public class Bar : MonoBehaviour
         }
 
         executedObject.SetActive(showExecuted);
+        taskObject.SetActive(showRequiredEnergy);
+
+        if (showRequiredEnergy)
+        {
+            timer += Time.deltaTime;
+            if (timer >= 1f)
+            {
+                timer = 0f;
+                taskObject.SetActive(!taskObject.activeSelf);
+            }
+        }
     }
 }
