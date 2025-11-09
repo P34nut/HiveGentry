@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17b394eec47aa24cb9ccfd47ad24b28, type: 3}
+  m_Name: Communication_Carola
+  m_EditorClassIdentifier: 
+  AffectedRoom: {fileID: 11400000, guid: 74ff56c96ce804143ab8dcfb7f912fa2, type: 2}
+  AffectedCharacter: {fileID: 11400000, guid: 2e3e5063cdfffdf43aedc81891e9bdbe, type: 2}
+  MinGameTime: 15
+  Chance: 40
+  StartSubtitles: Gentry, give me power for the repair drone.
+  StartClip: {fileID: 8300000, guid: f90d5a245c5150d4496126d0f7aba186, type: 3}
+  Duration: 25
+  NecessaryMinEnergy: 30
+  ReminderSubtitles: I can't fucking work like this, Gentry. The repair drone still
+    needs power!
+  ReminderClip: {fileID: 8300000, guid: 8251594f2a30c1e4997fdb982a46b9dd, type: 3}
+  LastReminderSubtitles: If you don't start that damn drone I'll kill you!
+  LastReminderClip: {fileID: 8300000, guid: 884c910925f28404e8ccf5d58977b18e, type: 3}
+  IsExecuted: 0
+  FailTimer: 0
+  FailStrikes: 0
+  SuccessTimer: 0

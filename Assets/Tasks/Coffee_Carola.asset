@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17b394eec47aa24cb9ccfd47ad24b28, type: 3}
+  m_Name: Coffee_Carola
+  m_EditorClassIdentifier: 
+  AffectedRoom: {fileID: 11400000, guid: 882af9c4837138a4488c44261e1d65cb, type: 2}
+  AffectedCharacter: {fileID: 11400000, guid: 2e3e5063cdfffdf43aedc81891e9bdbe, type: 2}
+  MinGameTime: 1
+  Chance: 35
+  StartSubtitles: Gentry, please make me a coffee.
+  StartClip: {fileID: 8300000, guid: 73d9296d3c6aa4cb2895251aeadce965, type: 3}
+  Duration: 15
+  NecessaryMinEnergy: 40
+  ReminderSubtitles: Gentry, I'm still waiting for my coffee.
+  ReminderClip: {fileID: 8300000, guid: 106cd3534310a40e2af927db313a3e0f, type: 3}
+  LastReminderSubtitles: Gentry, where's my coffee?
+  LastReminderClip: {fileID: 8300000, guid: ca6815ebcd9aa41709c34a7b65c0cdc6, type: 3}
+  IsExecuted: 0
+  FailTimer: 10.046043
+  FailStrikes: 2
+  SuccessTimer: 0
