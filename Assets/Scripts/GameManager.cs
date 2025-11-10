@@ -185,7 +185,7 @@ public class GameManager : MonoBehaviour
         {
             requiredOverallEnergy += currentTask.NecessaryMinEnergy;
         }
-        if (requiredOverallEnergy + task.NecessaryMinEnergy > 50 + GameTimer * 0.5f) yield break;
+        if (requiredOverallEnergy + task.NecessaryMinEnergy > 50 + GameTimer * 0.25f) yield break;
         if (CurrentTasks.Exists(obj => obj.AffectedRoom == task.AffectedRoom)) yield break;
         if (CurrentTasks.Exists(obj => obj.AffectedCharacter == task.AffectedCharacter)) yield break;
 

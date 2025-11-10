@@ -3505,6 +3505,10 @@ PrefabInstance:
       propertyPath: m_RenderingLayerMask
       value: 129
       objectReference: {fileID: 0}
+    - target: {fileID: 479982834366234584, guid: 6aa413879e8054b49b60f57a77da908b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 742d77e19cec64af0a1bcd1b1d284ed1, type: 2}
     - target: {fileID: 492059358166947839, guid: 6aa413879e8054b49b60f57a77da908b, type: 3}
       propertyPath: m_RenderingLayerMask
       value: 5
@@ -3893,6 +3897,10 @@ PrefabInstance:
       propertyPath: m_RenderingLayerMask
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6378590521288772750, guid: 6aa413879e8054b49b60f57a77da908b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 742d77e19cec64af0a1bcd1b1d284ed1, type: 2}
     - target: {fileID: 6386154509287680512, guid: 6aa413879e8054b49b60f57a77da908b, type: 3}
       propertyPath: m_RenderingLayerMask
       value: 3
