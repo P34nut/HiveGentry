@@ -15,11 +15,11 @@ MonoBehaviour:
   AffectedRoom: {fileID: 11400000, guid: 87da5891bde13174ea88b4e7563b5d31, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: f4db474119a7e49428e96caae8bc5b9d, type: 2}
   MinGameTime: 3
-  Chance: 25
+  Chance: 10
   StartSubtitles: Gentry, open the door.
   StartClip: {fileID: 8300000, guid: b407de8e1ede44a8b98a142605a367aa, type: 3}
   Duration: 3
-  NecessaryMinEnergy: 15
+  NecessaryMinEnergy: 20
   ReminderSubtitles: Gentry, I'm still waiting at this door.
   ReminderClip: {fileID: 8300000, guid: 48324fedb604342609159345cda7bc27, type: 3}
   LastReminderSubtitles: Gentry, open the door now.

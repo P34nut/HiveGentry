@@ -15,11 +15,11 @@ MonoBehaviour:
   AffectedRoom: {fileID: 11400000, guid: a517cc4759e3aed48a33e17d98c264f4, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: 2e3e5063cdfffdf43aedc81891e9bdbe, type: 2}
   MinGameTime: 3
-  Chance: 25
+  Chance: 10
   StartSubtitles: Hiya Gentry, one open door please.
   StartClip: {fileID: 8300000, guid: b3842e1c5fd17ed4597814cf14fb2e4b, type: 3}
   Duration: 3
-  NecessaryMinEnergy: 15
+  NecessaryMinEnergy: 20
   ReminderSubtitles: Just a reminder, still need that door open.
   ReminderClip: {fileID: 8300000, guid: 9600e9c6c04b9b9418ee1cfdf47b3957, type: 3}
   LastReminderSubtitles: "Look, I don\u2019t mean to be rude, but please open the

@@ -107,7 +107,8 @@ public class GameManager : MonoBehaviour
 
     private void CheckNextTask()
     {
-        foreach (var task in Tasks)
+        List<Task> randomizedTasks = RandomizeList(Tasks);
+        foreach (var task in randomizedTasks)
         {
             if (CurrentTasks.Contains(task)) continue;
             if (task.MinGameTime > GameTimer) continue;
@@ -116,6 +117,20 @@ public class GameManager : MonoBehaviour
             progress.Add(enumerator);
             break;
         }
+    }
+    
+    private List<T> RandomizeList<T>(List<T> originalList)
+    {
+        List<T> newList = new(originalList);
+        for (int i = newList.Count - 1; i > 0; i--)
+        {
+            int randomIndex = Random.Range(0, i + 1);
+
+            T temp = newList[i];
+            newList[i] = newList[randomIndex];
+            newList[randomIndex] = temp;
+        }
+        return newList;
     }
 
     private void CheckTaskConditions (Task task)
@@ -162,7 +177,7 @@ public class GameManager : MonoBehaviour
     {
         yield return null;
 
-        int maxTasks = Mathf.Clamp(Mathf.CeilToInt(GameTimer * 0.025f), 2, 4);
+        int maxTasks = Mathf.Clamp(Mathf.CeilToInt(GameTimer * 0.05f), 1, 4);
         if (CurrentTasks.Count >= maxTasks) yield break;
 
         float requiredOverallEnergy = 0f;
@@ -170,13 +185,14 @@ public class GameManager : MonoBehaviour
         {
             requiredOverallEnergy += currentTask.NecessaryMinEnergy;
         }
-        if (requiredOverallEnergy + task.NecessaryMinEnergy > 90) yield break;
+        if (requiredOverallEnergy + task.NecessaryMinEnergy > 50 + GameTimer * 0.5f) yield break;
         if (CurrentTasks.Exists(obj => obj.AffectedRoom == task.AffectedRoom)) yield break;
+        if (CurrentTasks.Exists(obj => obj.AffectedCharacter == task.AffectedCharacter)) yield break;
 
         task.Init();
         CurrentTasks.Add(task);
         SubtitleLabel.text = task.StartSubtitles;
-        if (task.StartClip != null) VoiceSource.PlayOneShot(task.StartClip);
+        if (task.StartClip != null) VoiceSource.PlayOneShot(task.StartClip, task.AffectedCharacter.SpeakVolume);
 
         OnTaskAdded?.Invoke();
 
@@ -199,17 +215,17 @@ public class GameManager : MonoBehaviour
         if (task.FailStrikes >= MaxTaskFails)
         {
             SubtitleLabel.text = task.AffectedCharacter.GameOverSubtitles;
-            VoiceSource.PlayOneShot(task.AffectedCharacter.GameOverClip);
+            VoiceSource.PlayOneShot(task.AffectedCharacter.GameOverClip, task.AffectedCharacter.SpeakVolume);
         }
         else if (task.FailStrikes == MaxTaskFails - 1)
         {
             SubtitleLabel.text = task.ReminderSubtitles;
-            if (task.ReminderClip != null) VoiceSource.PlayOneShot(task.ReminderClip);
+            if (task.ReminderClip != null) VoiceSource.PlayOneShot(task.ReminderClip, task.AffectedCharacter.SpeakVolume);
         }
         else
         {
             SubtitleLabel.text = task.ReminderSubtitles;
-            if (task.ReminderClip != null) VoiceSource.PlayOneShot(task.ReminderClip);
+            if (task.ReminderClip != null) VoiceSource.PlayOneShot(task.ReminderClip, task.AffectedCharacter.SpeakVolume);
         }
         
         float waitTimer = 0f;
@@ -223,6 +239,12 @@ public class GameManager : MonoBehaviour
         
         if (task.FailStrikes >= MaxTaskFails)
         {
+        waitTimer = 0f;
+        while (waitTimer <= 3f)
+        {
+            waitTimer += Time.deltaTime;
+            yield return null;
+        }
             SceneManager.LoadScene(sceneBuildIndex: 2);
         }
     }

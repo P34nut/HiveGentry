@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17b394eec47aa24cb9ccfd47ad24b28, type: 3}
   m_Name: SearchRoute_Jenny
   m_EditorClassIdentifier: 
-  AffectedRoom: {fileID: 11400000, guid: 112e38465e87d2a44b1a54199a7eaaad, type: 2}
+  AffectedRoom: {fileID: 11400000, guid: 87da5891bde13174ea88b4e7563b5d31, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: f4db474119a7e49428e96caae8bc5b9d, type: 2}
   MinGameTime: 3
-  Chance: 60
+  Chance: 50
   StartSubtitles: Gentry, calculate our next route.
   StartClip: {fileID: 8300000, guid: 71035248cfe9149509ba026e057fb8d1, type: 3}
   Duration: 15
-  NecessaryMinEnergy: 75
+  NecessaryMinEnergy: 25
   ReminderSubtitles: Gentry, calculate our next route at once.
   ReminderClip: {fileID: 8300000, guid: 310f7505af903413aae1c356b586fbc6, type: 3}
   LastReminderSubtitles: "Gentry, our next route, that\u2019s an order!"
   LastReminderClip: {fileID: 8300000, guid: 77bdb6c1db23243b4b4380530eda4a28, type: 3}
-  IsExecuted: 0
-  FailTimer: 0
-  FailStrikes: 0
-  SuccessTimer: 0
+  IsExecuted: 1
+  FailTimer: 2.532446
+  FailStrikes: 1
+  SuccessTimer: 2.275542

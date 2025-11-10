@@ -6,4 +6,5 @@ public class Character : ScriptableObject
     [TextArea]
     public string GameOverSubtitles;
     public AudioClip GameOverClip;
+    public float SpeakVolume;
 }

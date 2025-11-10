@@ -15,13 +15,13 @@ MonoBehaviour:
   AffectedRoom: {fileID: 11400000, guid: 882af9c4837138a4488c44261e1d65cb, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: dec28441b5a5cc644ac599af6e560f16, type: 2}
   MinGameTime: 3
-  Chance: 20
+  Chance: 10
   StartSubtitles: 'Gentry I need a coffee in T-1
 
 '
   StartClip: {fileID: 8300000, guid: bfde0711d932b1541a93db9bdb6cfa87, type: 3}
   Duration: 15
-  NecessaryMinEnergy: 40
+  NecessaryMinEnergy: 30
   ReminderSubtitles: There is no coffee yet. Did you copy before?
   ReminderClip: {fileID: 8300000, guid: 2060a6ae279cc084e96ad1c8f52a5b2a, type: 3}
   LastReminderSubtitles: ' I request a coffee on my Position NOW!'

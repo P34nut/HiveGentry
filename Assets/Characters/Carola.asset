@@ -16,3 +16,4 @@ MonoBehaviour:
     I\u2019m so, so sorry but we have to keep this ship running! So I guess we\u2019ll
     have to reset you."
   GameOverClip: {fileID: 8300000, guid: 6ce51701dbf59b349a5321595daf05f1, type: 3}
+  SpeakVolume: 0.75

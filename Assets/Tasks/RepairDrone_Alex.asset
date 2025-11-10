@@ -15,11 +15,11 @@ MonoBehaviour:
   AffectedRoom: {fileID: 11400000, guid: 112e38465e87d2a44b1a54199a7eaaad, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: 435682dfeb6aaf043ae332a54d109936, type: 2}
   MinGameTime: 3
-  Chance: 60
+  Chance: 50
   StartSubtitles: Gentry, give me power for the repair drone.
   StartClip: {fileID: 8300000, guid: f90d5a245c5150d4496126d0f7aba186, type: 3}
   Duration: 40
-  NecessaryMinEnergy: 35
+  NecessaryMinEnergy: 40
   ReminderSubtitles: I can't fucking work like this, Gentry. The repair drone still
     needs power!
   ReminderClip: {fileID: 8300000, guid: 8251594f2a30c1e4997fdb982a46b9dd, type: 3}

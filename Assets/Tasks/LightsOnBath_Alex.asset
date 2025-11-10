@@ -15,7 +15,7 @@ MonoBehaviour:
   AffectedRoom: {fileID: 11400000, guid: a517cc4759e3aed48a33e17d98c264f4, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: 435682dfeb6aaf043ae332a54d109936, type: 2}
   MinGameTime: 3
-  Chance: 35
+  Chance: 20
   StartSubtitles: Gentry. Lights on.
   StartClip: {fileID: 8300000, guid: 7f5ae35c6aab2044a92dd78fafb056a9, type: 3}
   Duration: 20

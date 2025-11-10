@@ -15,3 +15,4 @@ MonoBehaviour:
   GameOverSubtitles: Okay, that's it. I should've turned you off a long while ago
     and replace you with a new version.
   GameOverClip: {fileID: 8300000, guid: 606439aca3eaef24da64cc38b7550a61, type: 3}
+  SpeakVolume: 0.75

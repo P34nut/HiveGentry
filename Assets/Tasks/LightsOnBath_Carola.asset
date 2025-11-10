@@ -15,7 +15,7 @@ MonoBehaviour:
   AffectedRoom: {fileID: 11400000, guid: a517cc4759e3aed48a33e17d98c264f4, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: 2e3e5063cdfffdf43aedc81891e9bdbe, type: 2}
   MinGameTime: 3
-  Chance: 35
+  Chance: 20
   StartSubtitles: Hi Gentry, please turn on the light for me.
   StartClip: {fileID: 8300000, guid: 115f223888aa18c40ba251fa25b54fc6, type: 3}
   Duration: 20

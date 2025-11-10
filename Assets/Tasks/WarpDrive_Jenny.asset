@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17b394eec47aa24cb9ccfd47ad24b28, type: 3}
   m_Name: WarpDrive_Jenny
   m_EditorClassIdentifier: 
-  AffectedRoom: {fileID: 11400000, guid: 112e38465e87d2a44b1a54199a7eaaad, type: 2}
+  AffectedRoom: {fileID: 11400000, guid: 991e04d38531b1844918b33e39ffa05f, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: f4db474119a7e49428e96caae8bc5b9d, type: 2}
   MinGameTime: 3
-  Chance: 60
+  Chance: 50
   StartSubtitles: Gentry, launch the Warp Drive.
   StartClip: {fileID: 8300000, guid: 9157fe249e09c42edb6fa3db012c3635, type: 3}
   Duration: 20
-  NecessaryMinEnergy: 40
+  NecessaryMinEnergy: 60
   ReminderSubtitles: Gentry, the Warp Drive sequence should have started by now.
   ReminderClip: {fileID: 8300000, guid: d594b8bde601c4867a1a66c8214971de, type: 3}
   LastReminderSubtitles: "Gentry, the Warp Drive, that\u2019s an order!"

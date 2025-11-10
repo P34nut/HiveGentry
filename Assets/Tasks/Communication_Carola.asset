@@ -15,14 +15,14 @@ MonoBehaviour:
   AffectedRoom: {fileID: 11400000, guid: 74ff56c96ce804143ab8dcfb7f912fa2, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: 2e3e5063cdfffdf43aedc81891e9bdbe, type: 2}
   MinGameTime: 3
-  Chance: 60
+  Chance: 50
   StartSubtitles: 'Hey Gentry, just got a com line request, could you please open
     a channel for me?
 
 '
   StartClip: {fileID: 8300000, guid: 05fddaffb5c2e75478b74477f9cf96e9, type: 3}
   Duration: 25
-  NecessaryMinEnergy: 30
+  NecessaryMinEnergy: 40
   ReminderSubtitles: "Um Gentry? I\u2019d really hate to keep the other ship waiting."
   ReminderClip: {fileID: 8300000, guid: 3380bc06bace1dc419f4658d4db74848, type: 3}
   LastReminderSubtitles: "I\u2019m sorry, you\u2019re probably super busy but I do

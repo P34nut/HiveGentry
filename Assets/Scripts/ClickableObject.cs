@@ -31,9 +31,13 @@ public class ClickableObject : MonoBehaviour
     void Awake()
     {
         _collider = GetComponent<Collider>();
+    }
+
+    void Start ()
+    {
         highlighter = GameObject.CreatePrimitive(PrimitiveType.Cube);
         highlighter.transform.localScale = Vector3.one * 0.3f;
-        highlighter.transform.position = transform.position + Vector3.up;
+        highlighter.transform.position = transform.position + Vector3.up * 1.5f;
         highlighter.SetActive(false);
     }
 
@@ -99,16 +103,14 @@ public class ClickableObject : MonoBehaviour
         }
 
 
-if (highlighter != null)
-                {
-            
-        
-        float speed = 2f * Mathf.PI;
-        float amplitude = 0.5f;
+        if (highlighter != null)
+        {
+            float speed = 2f * Mathf.PI;
+            float amplitude = 1f;
 
-        float offsetY = Mathf.Sin(Time.time * speed) * amplitude;
+            float offsetY = Mathf.Sin(Time.time * speed) * amplitude;
 
-        Vector3 basePos = transform.position + Vector3.up * 1.25f;
+            Vector3 basePos = transform.position + Vector3.up * 1.5f;
             highlighter.transform.position = basePos + new Vector3(0, offsetY, 0);
         }
     }

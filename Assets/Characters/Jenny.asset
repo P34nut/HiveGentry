@@ -15,3 +15,4 @@ MonoBehaviour:
   GameOverSubtitles: Gentry, I'm really sorry, I have no choice but to replace you
     with a newer system.
   GameOverClip: {fileID: 8300000, guid: 22100b8e0d4a14bb8aaa52d1a4f0d1f5, type: 3}
+  SpeakVolume: 1

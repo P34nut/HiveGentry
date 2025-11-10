@@ -15,11 +15,11 @@ MonoBehaviour:
   AffectedRoom: {fileID: 11400000, guid: 882af9c4837138a4488c44261e1d65cb, type: 2}
   AffectedCharacter: {fileID: 11400000, guid: 2e3e5063cdfffdf43aedc81891e9bdbe, type: 2}
   MinGameTime: 3
-  Chance: 20
+  Chance: 10
   StartSubtitles: Hey dear Gentry, could you make me coffee, please?
   StartClip: {fileID: 8300000, guid: f51b74e8b1ecb5942ad828228cab1c43, type: 3}
   Duration: 15
-  NecessaryMinEnergy: 40
+  NecessaryMinEnergy: 30
   ReminderSubtitles: "I\u2019m sure you have a lot to do, but I really need that
     coffee. Pretty please?"
   ReminderClip: {fileID: 8300000, guid: 575df433602a5c4489ff607a73a50151, type: 3}
